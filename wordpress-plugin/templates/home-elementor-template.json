@@ -1,19 +1,19 @@
 {
   "content": [
     {
-      "id": "fd37e78",
+      "id": "39e5a63",
       "elType": "section",
       "settings": {},
       "elements": [
         {
-          "id": "d9f10d9",
+          "id": "ff1db08",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "74c413f",
+              "id": "2cd7af0",
               "elType": "widget",
               "widgetType": "nexia_hero_3d",
               "settings": {
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "id": "15494af",
+      "id": "a6f29aa",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -50,14 +50,14 @@
       },
       "elements": [
         {
-          "id": "b402f26",
+          "id": "3f53166",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "a0472d4",
+              "id": "58e8f1e",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -69,7 +69,7 @@
               "elements": []
             },
             {
-              "id": "4c0ddcb",
+              "id": "bf5d3b7",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "id": "9e1fe1b",
+      "id": "cc99c05",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -90,14 +90,14 @@
       },
       "elements": [
         {
-          "id": "54982d7",
+          "id": "4d38e74",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "cbbcf0c",
+              "id": "c02f7f7",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -109,7 +109,7 @@
               "elements": []
             },
             {
-              "id": "e6b7f37",
+              "id": "86ff283",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "id": "75e5d29",
+      "id": "f8de51b",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -130,14 +130,14 @@
       },
       "elements": [
         {
-          "id": "a634b6b",
+          "id": "e792d92",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "cececcf",
+              "id": "ac2e285",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -149,7 +149,7 @@
               "elements": []
             },
             {
-              "id": "8012f2f",
+              "id": "874314a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -158,27 +158,27 @@
               "elements": []
             },
             {
-              "id": "e7a1bb0",
+              "id": "71ab9c5",
               "elType": "widget",
               "widgetType": "nexia_method_steps",
               "settings": {
                 "steps": [
                   {
-                    "_id": "25b14dd",
+                    "_id": "1d975a6",
                     "number": "01",
                     "title": "Detectamos",
                     "body": "Localizamos tareas duplicadas, procesos manuales y puntos donde tu negocio sigue necesitando tu intervención.",
                     "sub": "Para descubrir dónde sigues siendo imprescindible sin necesitar serlo."
                   },
                   {
-                    "_id": "be38f8f",
+                    "_id": "ca55a29",
                     "number": "02",
                     "title": "Ordenamos",
                     "body": "Ponemos estructura en procesos, herramientas, responsabilidades, documentación y flujos de trabajo.",
                     "sub": "Para que tu negocio deje de vivir exclusivamente dentro de tu cabeza."
                   },
                   {
-                    "_id": "6f8c13e",
+                    "_id": "e805c36",
                     "number": "03",
                     "title": "Implementamos",
                     "body": "Creamos automatizaciones y sistemas operativos que funcionan en el día a día. Incorporamos Inteligencia Artificial cuando aporta valor.",
@@ -189,7 +189,7 @@
               "elements": []
             },
             {
-              "id": "8323ee1",
+              "id": "89b9f26",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -202,7 +202,47 @@
       ]
     },
     {
-      "id": "8a87f44",
+      "id": "9b769b8",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#090d1c"
+      },
+      "elements": [
+        {
+          "id": "22c3eaf",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "d3aa0ed",
+              "elType": "widget",
+              "widgetType": "nexia_engine_room",
+              "settings": {
+                "kicker": "Por dentro",
+                "title": "Así es la sala de máquinas de tu negocio cuando alguien la ordena.",
+                "text": "Radares que vigilan lo que importa, paneles que dejan de depender de tu memoria y sistemas que siguen funcionando aunque tú no estés mirando. Eso es lo que implementamos: la infraestructura invisible que sostiene tu operativa.",
+                "cta_text": "",
+                "cta_link": {
+                  "url": "",
+                  "is_external": "",
+                  "nofollow": ""
+                },
+                "visual_position": "right",
+                "color_accent": "#5b73ff",
+                "color_signal": "#2e4be2",
+                "color_core": "#c8d2ff"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f91bb03",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -210,14 +250,14 @@
       },
       "elements": [
         {
-          "id": "7281c4f",
+          "id": "6002c54",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "4d91426",
+              "id": "0bd486e",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -229,7 +269,7 @@
               "elements": []
             },
             {
-              "id": "3ba0c61",
+              "id": "aca799d",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -242,7 +282,7 @@
       ]
     },
     {
-      "id": "09672de",
+      "id": "88a127f",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -250,14 +290,14 @@
       },
       "elements": [
         {
-          "id": "337811a",
+          "id": "2a52daa",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "032b5e9",
+              "id": "9993014",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -269,7 +309,7 @@
               "elements": []
             },
             {
-              "id": "3d9e8b5",
+              "id": "d1af3bd",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -282,7 +322,7 @@
       ]
     },
     {
-      "id": "082651a",
+      "id": "ddc0a82",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -290,14 +330,14 @@
       },
       "elements": [
         {
-          "id": "cbb0c8b",
+          "id": "b8d0741",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "818789e",
+              "id": "23144ae",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -309,7 +349,7 @@
               "elements": []
             },
             {
-              "id": "d8c2386",
+              "id": "4beb09f",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -322,7 +362,7 @@
       ]
     },
     {
-      "id": "b4f2293",
+      "id": "447f454",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -330,14 +370,14 @@
       },
       "elements": [
         {
-          "id": "5c31587",
+          "id": "7af956c",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "477225a",
+              "id": "243d09a",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -349,7 +389,7 @@
               "elements": []
             },
             {
-              "id": "3f95304",
+              "id": "a7b2da6",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -362,7 +402,7 @@
       ]
     },
     {
-      "id": "d37b26c",
+      "id": "bd6f220",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -370,14 +410,14 @@
       },
       "elements": [
         {
-          "id": "278740a",
+          "id": "0767710",
           "elType": "column",
           "settings": {
             "_column_size": 50
           },
           "elements": [
             {
-              "id": "410267a",
+              "id": "6ad8717",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -389,7 +429,7 @@
               "elements": []
             },
             {
-              "id": "8719cca",
+              "id": "b9430ef",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -400,14 +440,14 @@
           ]
         },
         {
-          "id": "7404667",
+          "id": "0cc201f",
           "elType": "column",
           "settings": {
             "_column_size": 50
           },
           "elements": [
             {
-              "id": "f69e385",
+              "id": "6a67db3",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -420,7 +460,7 @@
       ]
     },
     {
-      "id": "0148007",
+      "id": "49f5b05",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -428,14 +468,14 @@
       },
       "elements": [
         {
-          "id": "c9ec2f0",
+          "id": "ba47c6f",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "4e9bafd",
+              "id": "2c64ccc",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -444,38 +484,38 @@
               "elements": []
             },
             {
-              "id": "a978448",
+              "id": "0fbd37c",
               "elType": "widget",
               "widgetType": "accordion",
               "settings": {
                 "tabs": [
                   {
-                    "_id": "0b7dcbe",
+                    "_id": "b186669",
                     "tab_title": "¿Qué significa Liberación Operativa?",
                     "tab_content": "Es reducir la dependencia diaria que tiene un negocio de su dueña mediante procesos claros, sistemas, documentación, automatización y una mejor distribución de responsabilidades. El objetivo no es que desaparezcas de tu negocio. Es que el negocio no necesite una intervención tuya para cada tarea."
                   },
                   {
-                    "_id": "b637cf1",
+                    "_id": "d7887cd",
                     "tab_title": "¿Somos Nexia trabaja como un equipo de IA?",
                     "tab_content": "Sí, pero la Inteligencia Artificial es una de nuestras capacidades, no toda nuestra identidad. Somos el equipo técnico de Liberación Operativa. Nuestra línea especializada en automatización avanzada y agentes de IA es Submarino NexIA™."
                   },
                   {
-                    "_id": "6684c92",
+                    "_id": "b3d55c5",
                     "tab_title": "¿Qué procesos de un negocio digital se pueden automatizar?",
                     "tab_content": "Depende de cada operativa. Solemos trabajar sobre tareas repetitivas relacionadas con seguimiento, CRM, formularios, reservas, emails, atención, clasificación de leads, gestión de información, actualización de datos e integraciones entre herramientas. Primero revisamos el proceso. Después decidimos qué merece ser automatizado."
                   },
                   {
-                    "_id": "3e20fb4",
+                    "_id": "188e2fc",
                     "tab_title": "¿Tengo que cambiar las herramientas que ya utilizo?",
                     "tab_content": "No necesariamente. Antes de añadir tecnología revisamos qué tienes, qué funciona, qué sobra y qué debería estar mejor conectado. No queremos una sala de máquinas más grande. Queremos una que funcione mejor."
                   },
                   {
-                    "_id": "69d1cfd",
+                    "_id": "70928d1",
                     "tab_title": "¿Somos Nexia hace estrategia o implementación?",
                     "tab_content": "Nuestro foco está en la implementación y la operativa. Tú marcas la dirección estratégica de tu negocio. Nosotras convertimos esa dirección en procesos, sistemas, automatizaciones e implementaciones que funcionen en el día a día."
                   },
                   {
-                    "_id": "185f78d",
+                    "_id": "25a070a",
                     "tab_title": "¿Qué servicios ofrece Somos Nexia?",
                     "tab_content": "Trabajamos mediante tres líneas: Delegación Técnica Puntual, para ejecutar necesidades concretas. Llave en Mano, para construir y conectar infraestructura digital. Submarino NexIA™, para reducir intervención manual mediante automatización e Inteligencia Artificial."
                   }
@@ -488,7 +528,7 @@
       ]
     },
     {
-      "id": "91f9c91",
+      "id": "4a3b477",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -496,14 +536,14 @@
       },
       "elements": [
         {
-          "id": "3fa2aa9",
+          "id": "10b825d",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "94e53e1",
+              "id": "defbae9",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -516,7 +556,7 @@
       ]
     },
     {
-      "id": "d8b9420",
+      "id": "21c17fe",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -524,14 +564,14 @@
       },
       "elements": [
         {
-          "id": "a7a1fbc",
+          "id": "8378916",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "df3f780",
+              "id": "900640a",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -543,7 +583,7 @@
               "elements": []
             },
             {
-              "id": "23f3d4c",
+              "id": "56261d3",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

@@ -7,6 +7,7 @@ const outDir = path.resolve(__dirname, "../nexia-elementor-widgets/assets/js");
 
 const entries = [
   { in: "src/hero-scene.js", out: "nexia-hero-scene.bundle.js" },
+  { in: "src/engine-room-scene.js", out: "nexia-engine-room.bundle.js" },
 ];
 
 for (const entry of entries) {

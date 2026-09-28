@@ -212,6 +212,117 @@
   margin: 0;
 }
 
+/* ---------- Sala de Máquinas 3D ---------- */
+.nexia-engine-room {
+  padding: clamp(56px, 8vw, 120px) clamp(20px, 6vw, 72px);
+  background: var(--nexia-bg);
+  color: var(--nexia-fg);
+}
+
+.nexia-engine-room__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+.nexia-engine-room--reverse .nexia-engine-room__inner {
+  direction: rtl;
+}
+
+.nexia-engine-room--reverse .nexia-engine-room__content,
+.nexia-engine-room--reverse .nexia-engine-room__visual {
+  direction: ltr;
+}
+
+.nexia-engine-room__kicker {
+  font-family: var(--nexia-font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--nexia-accent);
+  margin: 0 0 12px;
+}
+
+.nexia-engine-room__title {
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--nexia-fg);
+}
+
+.nexia-engine-room__body {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--nexia-muted);
+  margin: 0 0 24px;
+  max-width: 520px;
+}
+
+.nexia-engine-room__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  padding: 14px 26px;
+  font-family: var(--nexia-font-mono);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--nexia-border);
+  color: var(--nexia-fg);
+  text-decoration: none;
+  transition: border-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
+}
+
+.nexia-engine-room__cta:hover {
+  transform: translateY(-2px);
+  border-color: var(--nexia-accent);
+  color: var(--nexia-accent);
+}
+
+.nexia-engine-room__visual {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  border: 1px solid var(--nexia-border);
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at center,
+    var(--nexia-bg-alt),
+    var(--nexia-bg)
+  );
+}
+
+.nexia-engine-room__canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.nexia-engine-room__canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 900px) {
+  .nexia-engine-room__inner,
+  .nexia-engine-room--reverse .nexia-engine-room__inner {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .nexia-engine-room__visual {
+    order: -1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nexia-reveal,
   .nexia-stagger > * {

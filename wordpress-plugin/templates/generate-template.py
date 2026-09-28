@@ -122,6 +122,31 @@ def hero_3d_widget():
     }
 
 
+def engine_room_widget():
+    return {
+        "id": eid(),
+        "elType": "widget",
+        "widgetType": "nexia_engine_room",
+        "settings": {
+            "kicker": "Por dentro",
+            "title": "Así es la sala de máquinas de tu negocio cuando alguien la ordena.",
+            "text": (
+                "Radares que vigilan lo que importa, paneles que dejan de depender de tu "
+                "memoria y sistemas que siguen funcionando aunque tú no estés mirando. "
+                "Eso es lo que implementamos: la infraestructura invisible que sostiene "
+                "tu operativa."
+            ),
+            "cta_text": "",
+            "cta_link": {"url": "", "is_external": "", "nofollow": ""},
+            "visual_position": "right",
+            "color_accent": ACCENT,
+            "color_signal": SIGNAL,
+            "color_core": "#c8d2ff",
+        },
+        "elements": [],
+    }
+
+
 def method_steps_widget():
     steps = [
         {
@@ -340,6 +365,9 @@ sections.append(
         bg=BG,
     )
 )
+
+# 4b. Sala de máquinas (visual)
+sections.append(section([engine_room_widget()], bg=BG_ALT))
 
 # 5. Delegable
 delegable_html = wrap(
