@@ -1,31 +1,13 @@
-# Somos Nexia — Web
+# websomosnexia
 
-Rediseño de somosnexia.com: landing de Home con dirección visual 3D/motion (Next.js, React Three Fiber, Framer Motion) sobre el territorio de marca "Liberación Operativa" / Submarino Nexia.
+Rediseño de somosnexia.com con dirección visual 3D/motion sobre el territorio de marca "Liberación Operativa" / Submarino Nexia.
 
-## Stack
+La web sigue viviendo en **WordPress + Elementor**, así que el entregable real es un plugin. Este repo tiene dos carpetas:
 
-- [Next.js 16](https://nextjs.org) (App Router, Turbopack)
-- [Tailwind CSS v4](https://tailwindcss.com)
-- [React Three Fiber](https://r3f.docs.pmnd.rs) + [drei](https://github.com/pmndrs/drei) — escena 3D del hero (núcleo tipo radar/sónar + campo de partículas)
-- [Framer Motion](https://www.framer.com/motion/) — animaciones de aparición en scroll
-- [Lenis](https://github.com/darkroomengineering/lenis) — scroll suave
+## `wordpress-plugin/` — el entregable
 
-## Desarrollo
+Un plugin de WordPress (`nexia-elementor-widgets`) que añade a Elementor tres widgets con la nueva dirección visual (fondo oceánico oscuro, escena 3D tipo radar/sónar con Three.js, animaciones de aparición en scroll). Todo el copy se sigue editando desde el editor de Elementor, sin tocar código. Instrucciones de instalación en [`wordpress-plugin/README.md`](wordpress-plugin/README.md).
 
-```bash
-npm install
-npm run dev
-```
+## `prototype-nextjs/` — prototipo de diseño
 
-Abre [http://localhost:3000](http://localhost:3000).
-
-## Estructura
-
-- `src/lib/content.ts` — todo el copy de la Home (extraído del documento oficial de landings de la marca).
-- `src/components/three/HeroScene.tsx` — escena 3D del hero (client-only, importada con `next/dynamic`).
-- `src/components/sections/*` — cada bloque de la landing, en el orden del copy original.
-- `src/app/globals.css` — tokens de diseño (paleta oceánica oscura, tipografías).
-
-## Alcance actual
-
-Esta primera versión cubre la **Home** completa. Las landings de Servicios, Delegación Técnica, Llave en Mano, Submarino NexIA™ y Sobre Nosotras quedan pendientes para una siguiente fase (el copy ya está localizado y listo para reutilizar).
+La primera versión de este rediseño se construyó como app Next.js independiente, antes de saber que la web debía quedarse en WordPress/Elementor. Se conserva como referencia visual completa de la Home (mismo copy, mismos tokens de diseño, misma escena 3D) pero **no es lo que se despliega en producción**. Ver [`prototype-nextjs/README.md`](prototype-nextjs/README.md).

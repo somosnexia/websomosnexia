@@ -1,0 +1,13 @@
+{
+  "name": "nexia-widgets-build-tools",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Compila los assets JS (Three.js + escenas vanilla) del plugin nexia-elementor-widgets en bundles listos para WordPress.",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "three": "^0.186.1"
+  }
+}
