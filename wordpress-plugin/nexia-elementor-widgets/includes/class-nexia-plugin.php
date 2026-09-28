@@ -51,6 +51,13 @@ final class Nexia_Plugin
     public function enqueue_frontend_assets()
     {
         wp_enqueue_style(
+            'nexia-fonts',
+            'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap',
+            [],
+            null
+        );
+
+        wp_enqueue_style(
             'nexia-widgets',
             NEXIA_WIDGETS_URL . 'assets/css/nexia-widgets.css',
             [],
