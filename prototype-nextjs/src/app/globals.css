@@ -12,8 +12,8 @@
   --signal: #2e4be2;
   --signal-soft: #5b73ff;
 
-  --font-display: var(--font-space-grotesk);
-  --font-body: var(--font-inter);
+  --font-display: var(--font-poppins);
+  --font-body: var(--font-poppins);
 }
 
 @theme inline {

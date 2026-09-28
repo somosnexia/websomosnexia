@@ -1,9 +1,142 @@
 import * as THREE from "three";
 
+function buildSubmarine(accent, signal, coreColor) {
+  const group = new THREE.Group();
+
+  const hullLength = 2.4;
+  const hullRadius = 0.42;
+  const hullMaterial = new THREE.MeshBasicMaterial({
+    color: accent,
+    wireframe: true,
+    transparent: true,
+    opacity: 0.55,
+  });
+  const structureMaterial = new THREE.MeshBasicMaterial({
+    color: signal,
+    wireframe: true,
+    transparent: true,
+    opacity: 0.85,
+  });
+
+  // Casco: cápsula tumbada sobre el eje X.
+  const hull = new THREE.Mesh(
+    new THREE.CapsuleGeometry(hullRadius, hullLength - hullRadius * 2, 6, 16),
+    hullMaterial
+  );
+  hull.rotation.z = Math.PI / 2;
+  group.add(hull);
+
+  // Vela / torreta de mando.
+  const sailX = 0.18;
+  const sailHeight = 0.34;
+  const sail = new THREE.Mesh(
+    new THREE.CylinderGeometry(0.19, 0.24, sailHeight, 10),
+    structureMaterial
+  );
+  sail.position.set(sailX, hullRadius + sailHeight / 2, 0);
+  group.add(sail);
+
+  // Periscopio.
+  const periscopeHeight = 0.24;
+  const periscope = new THREE.Mesh(
+    new THREE.CylinderGeometry(0.022, 0.022, periscopeHeight, 6),
+    structureMaterial
+  );
+  periscope.position.set(
+    sailX,
+    hullRadius + sailHeight + periscopeHeight / 2,
+    0
+  );
+  group.add(periscope);
+
+  // Timones de popa (cruceta).
+  const sternX = -hullLength / 2 + 0.1;
+  const finV = new THREE.Mesh(
+    new THREE.BoxGeometry(0.03, 0.5, 0.06),
+    structureMaterial
+  );
+  finV.position.set(sternX, 0, 0);
+  group.add(finV);
+  const finH = new THREE.Mesh(
+    new THREE.BoxGeometry(0.03, 0.06, 0.5),
+    structureMaterial
+  );
+  finH.position.set(sternX, 0, 0);
+  group.add(finH);
+
+  // Hélice.
+  const propeller = new THREE.Mesh(
+    new THREE.TorusGeometry(0.13, 0.02, 6, 14),
+    structureMaterial
+  );
+  propeller.position.set(-hullLength / 2 - 0.06, 0, 0);
+  propeller.rotation.y = Math.PI / 2;
+  group.add(propeller);
+
+  // Red de nodos tipo "sistema / IA" enroscada sobre el casco.
+  const nodeCount = 13;
+  const nodeMaterial = new THREE.MeshBasicMaterial({ color: coreColor });
+  const nodes = [];
+  for (let i = 0; i < nodeCount; i++) {
+    const t = i / (nodeCount - 1);
+    const x = -hullLength / 2 + 0.3 + t * (hullLength - 0.6);
+    const angle = t * Math.PI * 4.2;
+    const r = hullRadius * 0.94;
+    const node = new THREE.Mesh(
+      new THREE.SphereGeometry(0.032, 8, 8),
+      nodeMaterial
+    );
+    node.position.set(x, Math.cos(angle) * r, Math.sin(angle) * r);
+    group.add(node);
+    nodes.push(node);
+  }
+
+  const linePositions = [];
+  for (let i = 0; i < nodes.length - 1; i++) {
+    linePositions.push(
+      nodes[i].position.x,
+      nodes[i].position.y,
+      nodes[i].position.z,
+      nodes[i + 1].position.x,
+      nodes[i + 1].position.y,
+      nodes[i + 1].position.z
+    );
+  }
+  for (let i = 0; i < nodes.length - 3; i += 2) {
+    linePositions.push(
+      nodes[i].position.x,
+      nodes[i].position.y,
+      nodes[i].position.z,
+      nodes[i + 3].position.x,
+      nodes[i + 3].position.y,
+      nodes[i + 3].position.z
+    );
+  }
+  const linesGeometry = new THREE.BufferGeometry();
+  linesGeometry.setAttribute(
+    "position",
+    new THREE.Float32BufferAttribute(linePositions, 3)
+  );
+  const lines = new THREE.LineSegments(
+    linesGeometry,
+    new THREE.LineBasicMaterial({
+      color: accent,
+      transparent: true,
+      opacity: 0.45,
+    })
+  );
+  group.add(lines);
+
+  group.rotation.z = -0.08;
+  group.scale.setScalar(1.05);
+
+  return { group, nodes, hull, periscope };
+}
+
 function initScene(container) {
   const accent = container.dataset.accent || "#5b73ff";
   const signal = container.dataset.signal || "#2e4be2";
-  const coreColor = container.dataset.core || "#7c92ff";
+  const coreColor = container.dataset.core || "#c8d2ff";
 
   const reducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
@@ -16,7 +149,7 @@ function initScene(container) {
     0.1,
     100
   );
-  camera.position.set(0, 0.4, 6.4);
+  camera.position.set(0.6, 0.5, 6.4);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
@@ -26,31 +159,9 @@ function initScene(container) {
   scene.fog = new THREE.Fog(0x05070d, 6, 13);
   scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 
-  // Núcleo tipo radar/sónar
-  const group = new THREE.Group();
+  const { group, nodes, periscope } = buildSubmarine(accent, signal, coreColor);
+  group.position.set(2.1, -0.2, -0.9);
   scene.add(group);
-
-  const outerCore = new THREE.Mesh(
-    new THREE.IcosahedronGeometry(1.35, 1),
-    new THREE.MeshBasicMaterial({
-      color: coreColor,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.55,
-    })
-  );
-  group.add(outerCore);
-
-  const innerCore = new THREE.Mesh(
-    new THREE.IcosahedronGeometry(0.68, 0),
-    new THREE.MeshBasicMaterial({
-      color: signal,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.85,
-    })
-  );
-  group.add(innerCore);
 
   function makeRing() {
     const ring = new THREE.Mesh(
@@ -69,7 +180,7 @@ function initScene(container) {
   const ring1 = makeRing();
   const ring2 = makeRing();
 
-  // Campo de partículas (plancton / señales)
+  // Campo de partículas (plancton / señales del océano).
   const count = 900;
   const positions = new Float32Array(count * 3);
   for (let i = 0; i < count; i++) {
@@ -106,9 +217,14 @@ function initScene(container) {
     const t = clock.getElapsedTime();
 
     if (!reducedMotion) {
-      group.rotation.y = t * 0.12;
-      group.rotation.x = Math.sin(t * 0.2) * 0.15;
+      group.rotation.y = 0.5 + Math.sin(t * 0.15) * 0.5;
       group.position.y = Math.sin(t * 0.6) * 0.08;
+      periscope.rotation.y = Math.sin(t * 0.8) * 0.1;
+
+      nodes.forEach((node, i) => {
+        const s = 1 + Math.sin(t * 2 + i * 0.6) * 0.35;
+        node.scale.setScalar(s);
+      });
 
       const phase1 = (t * 0.4) % 1.6;
       ring1.scale.setScalar(1 + phase1);
@@ -141,8 +257,6 @@ function initScene(container) {
     cancelAnimationFrame(frameId);
     resizeObserver.disconnect();
     renderer.dispose();
-    outerCore.geometry.dispose();
-    innerCore.geometry.dispose();
     particlesGeometry.dispose();
     container.removeChild(renderer.domElement);
   };

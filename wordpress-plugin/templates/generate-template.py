@@ -28,9 +28,9 @@ MUTED = "#96a3c4"
 ACCENT = "#5b73ff"
 SIGNAL = "#2e4be2"
 
-FONT_DISPLAY = "'Space Grotesk', ui-sans-serif, system-ui, sans-serif"
-FONT_BODY = "'Inter', ui-sans-serif, system-ui, sans-serif"
-FONT_MONO = "'IBM Plex Mono', ui-monospace, monospace"
+FONT_DISPLAY = "'Poppins', ui-sans-serif, system-ui, sans-serif"
+FONT_BODY = "'Poppins', ui-sans-serif, system-ui, sans-serif"
+FONT_MONO = "'Poppins', ui-sans-serif, system-ui, sans-serif"
 
 
 def eid():
@@ -115,7 +115,7 @@ def hero_3d_widget():
             "cta_link": {"url": DEMO_URL, "is_external": "", "nofollow": ""},
             "color_accent": ACCENT,
             "color_signal": SIGNAL,
-            "color_core": "#7c92ff",
+            "color_core": "#c8d2ff",
             "min_height": {"unit": "vh", "size": 92, "sizes": []},
         },
         "elements": [],

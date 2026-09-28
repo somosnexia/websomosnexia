@@ -8,9 +8,9 @@
   --nexia-muted: #96a3c4;
   --nexia-accent: #5b73ff;
   --nexia-signal: #2e4be2;
-  --nexia-font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --nexia-font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --nexia-font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --nexia-font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --nexia-font-body: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --nexia-font-mono: "Poppins", ui-sans-serif, system-ui, sans-serif;
 }
 
 .nexia-widgets-scope,

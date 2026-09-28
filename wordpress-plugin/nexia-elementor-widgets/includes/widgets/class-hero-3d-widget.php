@@ -87,21 +87,21 @@ class Nexia_Hero_3D_Widget extends Widget_Base
         ]);
 
         $this->add_control('color_accent', [
-            'label' => __('Acento (partículas / anillo sónar)', 'nexia-elementor-widgets'),
+            'label' => __('Acento (casco, partículas, sónar)', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::COLOR,
             'default' => '#5b73ff',
         ]);
 
         $this->add_control('color_signal', [
-            'label' => __('Señal (núcleo interior / CTA)', 'nexia-elementor-widgets'),
+            'label' => __('Señal (torreta, periscopio, CTA)', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::COLOR,
             'default' => '#2e4be2',
         ]);
 
         $this->add_control('color_core', [
-            'label' => __('Núcleo exterior', 'nexia-elementor-widgets'),
+            'label' => __('Núcleo (nodos del sistema/IA sobre el casco)', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#7c92ff',
+            'default' => '#c8d2ff',
         ]);
 
         $this->add_control('min_height', [
