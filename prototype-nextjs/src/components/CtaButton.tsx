@@ -16,7 +16,7 @@ export default function CtaButton({
     "inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide transition-colors";
   const styles =
     variant === "solid"
-      ? "bg-signal text-[#180d02] hover:bg-signal-soft"
+      ? "bg-signal text-foreground hover:bg-signal-soft"
       : "border border-surface-border text-foreground hover:border-accent hover:text-accent";
 
   return (

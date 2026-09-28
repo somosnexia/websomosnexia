@@ -63,7 +63,7 @@ class Nexia_Hero_3D_Widget extends Widget_Base
             'label' => __('Texto', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::TEXTAREA,
             'rows' => 4,
-            'default' => 'Somos Nexia es una agencia de Liberación Operativa para negocios digitales. Ordenamos procesos, implementamos sistemas y utilizamos automatización e Inteligencia Artificial cuando ayudan a reducir todo ese trabajo que sigue dependiendo innecesariamente de ti o de tu equipo.',
+            'default' => 'Somos Nexia, el equipo técnico de Liberación Operativa para negocios digitales. Ordenamos procesos, implementamos sistemas y utilizamos automatización e Inteligencia Artificial cuando ayudan a reducir todo ese trabajo que sigue dependiendo innecesariamente de ti o de tu equipo.',
         ]);
 
         $this->add_control('cta_text', [
@@ -89,19 +89,19 @@ class Nexia_Hero_3D_Widget extends Widget_Base
         $this->add_control('color_accent', [
             'label' => __('Acento (partículas / anillo sónar)', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#4fe3c8',
+            'default' => '#5b73ff',
         ]);
 
         $this->add_control('color_signal', [
             'label' => __('Señal (núcleo interior / CTA)', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#ffb15c',
+            'default' => '#2e4be2',
         ]);
 
         $this->add_control('color_core', [
             'label' => __('Núcleo exterior', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::COLOR,
-            'default' => '#9df2df',
+            'default' => '#7c92ff',
         ]);
 
         $this->add_control('min_height', [

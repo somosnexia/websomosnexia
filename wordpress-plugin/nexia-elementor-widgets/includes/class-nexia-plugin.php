@@ -52,7 +52,7 @@ final class Nexia_Plugin
     {
         wp_enqueue_style(
             'nexia-fonts',
-            'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap',
+            'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap',
             [],
             null
         );

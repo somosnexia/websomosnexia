@@ -1,34 +1,34 @@
 {
   "content": [
     {
-      "id": "9ed92b3",
+      "id": "e7fd282",
       "elType": "section",
       "settings": {},
       "elements": [
         {
-          "id": "a1ad295",
+          "id": "45cfd10",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "b906414",
+              "id": "1134fbd",
               "elType": "widget",
               "widgetType": "nexia_hero_3d",
               "settings": {
                 "kicker": "Liberación operativa para negocios digitales",
                 "heading": "Tu negocio no necesita más horas tuyas. Necesita dejar de depender de ti.",
-                "body": "Somos Nexia es una agencia de Liberación Operativa para negocios digitales. Ordenamos procesos, implementamos sistemas y utilizamos automatización e Inteligencia Artificial cuando ayudan a reducir todo ese trabajo que sigue dependiendo innecesariamente de ti o de tu equipo, para que tengas menos tareas y más tiempo para crecer.",
+                "body": "Somos Nexia, el equipo técnico de Liberación Operativa para negocios digitales. Ordenamos procesos, implementamos sistemas y utilizamos automatización e Inteligencia Artificial cuando ayudan a reducir todo ese trabajo que sigue dependiendo innecesariamente de ti o de tu equipo, para que tengas menos tareas y más tiempo para crecer.",
                 "cta_text": "Quiero liberar mi operativa",
                 "cta_link": {
                   "url": "https://app.somosnexia.com/demo",
                   "is_external": "",
                   "nofollow": ""
                 },
-                "color_accent": "#4fe3c8",
-                "color_signal": "#ffb15c",
-                "color_core": "#9df2df",
+                "color_accent": "#5b73ff",
+                "color_signal": "#2e4be2",
+                "color_core": "#7c92ff",
                 "min_height": {
                   "unit": "vh",
                   "size": 92,
@@ -42,22 +42,22 @@
       ]
     },
     {
-      "id": "d71f887",
+      "id": "868fd7d",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#050b14"
+        "background_color": "#05070d"
       },
       "elements": [
         {
-          "id": "bc947c6",
+          "id": "73a9803",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "2202708",
+              "id": "53a55df",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -69,11 +69,11 @@
               "elements": []
             },
             {
-              "id": "27bea5d",
+              "id": "3d35be4",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#f2f6f9; font-size:19px; line-height:1.65; max-width:720px; \">Facturas.<br>Tienes clientes.<br>Desde fuera, todo parece ir bien.</p><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">Pero cada decisión, cada incidencia, cada tarea técnica y cada pregunta de tu equipo termina en el mismo sitio: en ti.</p><div style=\"border-left:2px solid #ffb15c; padding-left:20px; margin:24px 0;\"><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:19px; font-weight:600; color:#f2f6f9; margin:0 0 6px;\">Si tú no respondes, se retrasa.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:19px; font-weight:600; color:#f2f6f9; margin:0 0 6px;\">Si tú no revisas, no sale.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:19px; font-weight:600; color:#f2f6f9; margin:0 0 6px;\">Si tú no recuerdas, se olvida.</p></div><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">Y cuando aumentan las ventas también aumenta tu carga de trabajo.</p><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">No tiene que ver con tu capacidad. El sistema con el que llegaste hasta aquí se ha quedado pequeño.</p><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">Si tu negocio ha crecido, ahora necesita una estructura que también crezca con él. Porque estar en todo puede haberte traído hasta este punto. Pero no debería ser lo que te obligue a quedarte en él.</p>\n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#f2f5fb; font-size:19px; line-height:1.65; max-width:720px; \">Facturas.<br>Tienes clientes.<br>Desde fuera, todo parece ir bien.</p><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">Pero cada decisión, cada incidencia, cada tarea técnica y cada pregunta de tu equipo termina en el mismo sitio: en ti.</p><div style=\"border-left:2px solid #2e4be2; padding-left:20px; margin:24px 0;\"><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:19px; font-weight:600; color:#f2f5fb; margin:0 0 6px;\">Si tú no respondes, se retrasa.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:19px; font-weight:600; color:#f2f5fb; margin:0 0 6px;\">Si tú no revisas, no sale.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:19px; font-weight:600; color:#f2f5fb; margin:0 0 6px;\">Si tú no recuerdas, se olvida.</p></div><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">Y cuando aumentan las ventas también aumenta tu carga de trabajo.</p><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">No tiene que ver con tu capacidad. El sistema con el que llegaste hasta aquí se ha quedado pequeño.</p><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">Si tu negocio ha crecido, ahora necesita una estructura que también crezca con él. Porque estar en todo puede haberte traído hasta este punto. Pero no debería ser lo que te obligue a quedarte en él.</p>\n    </div>\n    "
               },
               "elements": []
             }
@@ -82,22 +82,22 @@
       ]
     },
     {
-      "id": "f5622bd",
+      "id": "5d23002",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#0d1c30"
+        "background_color": "#0c1226"
       },
       "elements": [
         {
-          "id": "8d95bd0",
+          "id": "ad97b11",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "45e63e9",
+              "id": "4baa150",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -109,11 +109,11 @@
               "elements": []
             },
             {
-              "id": "fda1ade",
+              "id": "eee6e3a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#0d1c30; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#f2f6f9; font-size:19px; line-height:1.65; max-width:720px; \">Escala cuando puede sostener más clientes, más ventas y más movimiento sin necesitar de tu tiempo y de tu supervisión constante.</p><p style=\"color:#4fe3c8; font-size:18px; line-height:1.65; max-width:720px; font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif;\">Cuando dejas de depender de la operativa diaria · Cuando puedes organizarte mejor · Trabajar más rápido · Contratar a alguien.</p><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">Pero si los procesos siguen viviendo en tu cabeza, tu equipo necesita tu aprobación para avanzar y cada tarea depende de una acción tuya... sigues siendo imprescindible para la operativa.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:26px; font-weight:600; color:#ffb15c; margin:20px 0;\">Y ser imprescindible está guay hasta que quieres apagar el portátil.</p><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">Entonces la cosa se complica y empiezas a sentir que el negocio te ahoga. Necesitas que el negocio avance sin depender de ti para toooodo.</p>\n    </div>\n    "
+                "html": "\n    <div style=\"background:#0c1226; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#f2f5fb; font-size:19px; line-height:1.65; max-width:720px; \">Escala cuando puede sostener más clientes, más ventas y más movimiento sin necesitar de tu tiempo y de tu supervisión constante.</p><p style=\"color:#5b73ff; font-size:18px; line-height:1.65; max-width:720px; font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif;\">Cuando dejas de depender de la operativa diaria · Cuando puedes organizarte mejor · Trabajar más rápido · Contratar a alguien.</p><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">Pero si los procesos siguen viviendo en tu cabeza, tu equipo necesita tu aprobación para avanzar y cada tarea depende de una acción tuya... sigues siendo imprescindible para la operativa.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:26px; font-weight:600; color:#5b73ff; margin:20px 0;\">Y ser imprescindible está guay hasta que quieres apagar el portátil.</p><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">Entonces la cosa se complica y empiezas a sentir que el negocio te ahoga. Necesitas que el negocio avance sin depender de ti para toooodo.</p>\n    </div>\n    "
               },
               "elements": []
             }
@@ -122,22 +122,22 @@
       ]
     },
     {
-      "id": "f235b20",
+      "id": "c38f47f",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#050b14"
+        "background_color": "#05070d"
       },
       "elements": [
         {
-          "id": "23e97d6",
+          "id": "3694887",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "e185f10",
+              "id": "8aef276",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -149,36 +149,36 @@
               "elements": []
             },
             {
-              "id": "48dda25",
+              "id": "a1146b5",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px 32px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#f2f6f9; font-size:19px; line-height:1.65; max-width:720px; max-width:760px; margin:0 auto;\">Esto puede parecer complejo, pero lo que hacemos es sumergirnos y descubrir qué sobra en tu sistema, qué falla y qué sigue dependiendo innecesariamente de ti. Para eso trabajamos con nuestro Método NEXIA™.</p>\n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px 32px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#f2f5fb; font-size:19px; line-height:1.65; max-width:720px; max-width:760px; margin:0 auto;\">Esto puede parecer complejo, pero lo que hacemos es sumergirnos y descubrir qué sobra en tu sistema, qué falla y qué sigue dependiendo innecesariamente de ti. Para eso trabajamos con nuestro Método NEXIA™.</p>\n    </div>\n    "
               },
               "elements": []
             },
             {
-              "id": "63485fc",
+              "id": "1348836",
               "elType": "widget",
               "widgetType": "nexia_method_steps",
               "settings": {
                 "steps": [
                   {
-                    "_id": "034c8b6",
+                    "_id": "adc7ee4",
                     "number": "01",
                     "title": "Detectamos",
                     "body": "Localizamos tareas duplicadas, procesos manuales y puntos donde tu negocio sigue necesitando tu intervención.",
                     "sub": "Para descubrir dónde sigues siendo imprescindible sin necesitar serlo."
                   },
                   {
-                    "_id": "54ab255",
+                    "_id": "84e4bc6",
                     "number": "02",
                     "title": "Ordenamos",
                     "body": "Ponemos estructura en procesos, herramientas, responsabilidades, documentación y flujos de trabajo.",
                     "sub": "Para que tu negocio deje de vivir exclusivamente dentro de tu cabeza."
                   },
                   {
-                    "_id": "dc13ce0",
+                    "_id": "016bf44",
                     "number": "03",
                     "title": "Implementamos",
                     "body": "Creamos automatizaciones y sistemas operativos que funcionan en el día a día. Incorporamos Inteligencia Artificial cuando aporta valor.",
@@ -189,11 +189,11 @@
               "elements": []
             },
             {
-              "id": "e425cf7",
+              "id": "e9523bc",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:32px 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      \n    <div style=\"display:flex; justify-content:center; margin-top:8px;\">\n      <a href=\"https://app.somosnexia.com/demo\" style=\"display:inline-flex; align-items:center; gap:8px;\n        border-radius:999px; padding:15px 28px; font-weight:600; font-size:14px;\n        letter-spacing:0.02em; text-transform:uppercase; background:#ffb15c;\n        color:#180d02; text-decoration:none; font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif;\">\n        Quiero saber qué está frenando mi negocio <span aria-hidden=\"true\">&rarr;</span>\n      </a>\n    </div>\n    \n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:32px 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      \n    <div style=\"display:flex; justify-content:center; margin-top:8px;\">\n      <a href=\"https://app.somosnexia.com/demo\" style=\"display:inline-flex; align-items:center; gap:10px;\n        border-radius:4px; padding:15px 28px; font-weight:500; font-size:14px;\n        letter-spacing:0.04em; text-transform:uppercase; background:#2e4be2;\n        color:#f2f5fb; text-decoration:none; font-family:'IBM Plex Mono', ui-monospace, monospace;\">\n        Quiero saber qué está frenando mi negocio <span aria-hidden=\"true\">&rarr;</span>\n      </a>\n    </div>\n    \n    </div>\n    "
               },
               "elements": []
             }
@@ -202,22 +202,22 @@
       ]
     },
     {
-      "id": "79365d3",
+      "id": "139303b",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#0d1c30"
+        "background_color": "#0c1226"
       },
       "elements": [
         {
-          "id": "960c555",
+          "id": "af5cd77",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "55bb31d",
+              "id": "dde2495",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -229,11 +229,11 @@
               "elements": []
             },
             {
-              "id": "d88e73a",
+              "id": "234af89",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">Quizá ya lo intentaste. Contrataste una asistente. Un freelance. Una agencia.</p><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">Explicaste una tarea. La entregaron. Y terminaste repasándola, corrigiéndola o directamente haciéndola tú otra vez.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-style:italic; font-size:22px; color:#ffb15c; margin:24px 0;\">«Delegar me da más trabajo que hacerlo yo».</p><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">Pero hay otro diagnóstico posible. Tal vez intentaste delegar un proceso que nunca estuvo realmente construido. Porque si el criterio está en tu cabeza, la información está repartida entre WhatsApp y audios y nadie sabe exactamente qué significa «bien hecho»... no estás delegando. Estás cruzando los dedos.</p><ul style=\"color:#f2f6f9; font-size:17px; line-height:1.6; padding-left:22px; max-width:720px;\"><li style=\"margin-bottom:10px;\">Documentamos</li><li style=\"margin-bottom:10px;\">Simplificamos</li><li style=\"margin-bottom:10px;\">Definimos responsabilidades</li><li style=\"margin-bottom:10px;\">Creamos criterios</li><li style=\"margin-bottom:10px;\">Automatizamos lo repetitivo</li><li style=\"margin-bottom:10px;\">Ponemos la información donde debe estar</li></ul><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:24px; font-weight:600; color:#f2f6f9; margin-top:20px;\">Entonces delegar deja de ser un acto de fe. Se convierte en un sistema.</p>\n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">Quizá ya lo intentaste. Contrataste una asistente. Un freelance. Una consultora.</p><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">Explicaste una tarea. La entregaron. Y terminaste repasándola, corrigiéndola o directamente haciéndola tú otra vez.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-style:italic; font-size:22px; color:#5b73ff; margin:24px 0;\">«Delegar me da más trabajo que hacerlo yo».</p><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">Pero hay otro diagnóstico posible. Tal vez intentaste delegar un proceso que nunca estuvo realmente construido. Porque si el criterio está en tu cabeza, la información está repartida entre WhatsApp y audios y nadie sabe exactamente qué significa «bien hecho»... no estás delegando. Estás cruzando los dedos.</p><ul style=\"color:#f2f5fb; font-size:17px; line-height:1.6; padding-left:22px; max-width:720px;\"><li style=\"margin-bottom:10px;\">Documentamos</li><li style=\"margin-bottom:10px;\">Simplificamos</li><li style=\"margin-bottom:10px;\">Definimos responsabilidades</li><li style=\"margin-bottom:10px;\">Creamos criterios</li><li style=\"margin-bottom:10px;\">Automatizamos lo repetitivo</li><li style=\"margin-bottom:10px;\">Ponemos la información donde debe estar</li></ul><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:24px; font-weight:600; color:#f2f5fb; margin-top:20px;\">Entonces delegar deja de ser un acto de fe. Se convierte en un sistema.</p>\n    </div>\n    "
               },
               "elements": []
             }
@@ -242,22 +242,22 @@
       ]
     },
     {
-      "id": "77c0d37",
+      "id": "23100fb",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#050b14"
+        "background_color": "#05070d"
       },
       "elements": [
         {
-          "id": "056e9d5",
+          "id": "f7f0763",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "5713481",
+              "id": "f79f870",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -269,11 +269,11 @@
               "elements": []
             },
             {
-              "id": "7bd69e2",
+              "id": "6d391bd",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; max-width:760px; margin:0 auto 16px;\">Liberar la operativa significa distinguir entre dónde tu presencia aporta valor y dónde se ha convertido en costumbre. Lo que no significa desaparecer de tu empresa. Queremos que estés donde realmente haces falta.</p><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; max-width:760px; margin:0 auto 32px;\">Según lo que esté frenando tu negocio, podemos entrar a ejecutar, construir o automatizar. Desde una implementación técnica puntual hasta una infraestructura completa o procesos con automatización e Inteligencia Artificial.</p>\n    <div style=\"display:flex; justify-content:center; margin-top:8px;\">\n      <a href=\"https://app.somosnexia.com/demo\" style=\"display:inline-flex; align-items:center; gap:8px;\n        border-radius:999px; padding:15px 28px; font-weight:600; font-size:14px;\n        letter-spacing:0.02em; text-transform:uppercase; background:#ffb15c;\n        color:#180d02; text-decoration:none; font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif;\">\n        Ver servicios <span aria-hidden=\"true\">&rarr;</span>\n      </a>\n    </div>\n    <div style=\"text-align:center; margin-top:32px; font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:22px; font-weight:600; color:#f2f6f9;\">Tu negocio no tiene que funcionar sin ti.<br>Tiene que poder funcionar sin necesitarte para todo.</div>\n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; max-width:760px; margin:0 auto 16px;\">Liberar la operativa significa distinguir entre dónde tu presencia aporta valor y dónde se ha convertido en costumbre. Lo que no significa desaparecer de tu empresa. Queremos que estés donde realmente haces falta.</p><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; max-width:760px; margin:0 auto 32px;\">Según lo que esté frenando tu negocio, podemos entrar a ejecutar, construir o automatizar. Desde una implementación técnica puntual hasta una infraestructura completa o procesos con automatización e Inteligencia Artificial.</p>\n    <div style=\"display:flex; justify-content:center; margin-top:8px;\">\n      <a href=\"https://app.somosnexia.com/demo\" style=\"display:inline-flex; align-items:center; gap:10px;\n        border-radius:4px; padding:15px 28px; font-weight:500; font-size:14px;\n        letter-spacing:0.04em; text-transform:uppercase; background:#2e4be2;\n        color:#f2f5fb; text-decoration:none; font-family:'IBM Plex Mono', ui-monospace, monospace;\">\n        Ver servicios <span aria-hidden=\"true\">&rarr;</span>\n      </a>\n    </div>\n    <div style=\"text-align:center; margin-top:32px; font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:22px; font-weight:600; color:#f2f5fb;\">Tu negocio no tiene que funcionar sin ti.<br>Tiene que poder funcionar sin necesitarte para todo.</div>\n    </div>\n    "
               },
               "elements": []
             }
@@ -282,22 +282,22 @@
       ]
     },
     {
-      "id": "20dd1f5",
+      "id": "bf9d10f",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#0d1c30"
+        "background_color": "#0c1226"
       },
       "elements": [
         {
-          "id": "736d877",
+          "id": "8cf3764",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "6a825fb",
+              "id": "6a8eea6",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -309,11 +309,11 @@
               "elements": []
             },
             {
-              "id": "9c8e375",
+              "id": "c69a0e1",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#f2f6f9; font-size:18px; line-height:1.65; max-width:720px; \">Trabajamos con emprendedoras y empresarias digitales que ya tienen un negocio funcionando, pero cuya estructura operativa se ha quedado atrás. Especialmente si:</p><ul style=\"color:#f2f6f9; font-size:17px; line-height:1.6; padding-left:22px; max-width:720px;\"><li style=\"margin-bottom:10px;\">ya tienes clientes y facturación</li><li style=\"margin-bottom:10px;\">rondas los 7.000 € mensuales o más y cada aumento de ventas supone más trabajo para ti</li><li style=\"margin-bottom:10px;\">tienes equipo, pero demasiadas decisiones siguen pasando por tus manos</li><li style=\"margin-bottom:10px;\">estás utilizando varias herramientas que no terminan de trabajar juntas</li><li style=\"margin-bottom:10px;\">sigues haciendo manualmente tareas que se repiten cada semana</li><li style=\"margin-bottom:10px;\">has intentado delegar y acabas supervisándolo todo</li><li style=\"margin-bottom:10px;\">el día se te va manteniendo el negocio y nunca llegas a los proyectos que podrían hacerlo crecer</li><li style=\"margin-bottom:10px;\">o te da miedo aumentar las ventas porque sabes lo que significaría para tu operativa actual</li></ul><p style=\"color:#f2f6f9; font-size:18px; line-height:1.65; max-width:720px; margin-top:20px;\">Si has construido un negocio que funciona pero empiezas a sentir que te está tragando, tenemos una conversación pendiente.</p>\n    <div style=\"display:flex; justify-content:flex-start; margin-top:8px;\">\n      <a href=\"https://app.somosnexia.com/demo\" style=\"display:inline-flex; align-items:center; gap:8px;\n        border-radius:999px; padding:15px 28px; font-weight:600; font-size:14px;\n        letter-spacing:0.02em; text-transform:uppercase; background:#ffb15c;\n        color:#180d02; text-decoration:none; font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif;\">\n        Quiero contaros mi caso <span aria-hidden=\"true\">&rarr;</span>\n      </a>\n    </div>\n    \n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#f2f5fb; font-size:18px; line-height:1.65; max-width:720px; \">Trabajamos con emprendedoras y empresarias digitales que ya tienen un negocio funcionando, pero cuya estructura operativa se ha quedado atrás. Especialmente si:</p><ul style=\"color:#f2f5fb; font-size:17px; line-height:1.6; padding-left:22px; max-width:720px;\"><li style=\"margin-bottom:10px;\">ya tienes clientes y facturación</li><li style=\"margin-bottom:10px;\">rondas los 7.000 € mensuales o más y cada aumento de ventas supone más trabajo para ti</li><li style=\"margin-bottom:10px;\">tienes equipo, pero demasiadas decisiones siguen pasando por tus manos</li><li style=\"margin-bottom:10px;\">estás utilizando varias herramientas que no terminan de trabajar juntas</li><li style=\"margin-bottom:10px;\">sigues haciendo manualmente tareas que se repiten cada semana</li><li style=\"margin-bottom:10px;\">has intentado delegar y acabas supervisándolo todo</li><li style=\"margin-bottom:10px;\">el día se te va manteniendo el negocio y nunca llegas a los proyectos que podrían hacerlo crecer</li><li style=\"margin-bottom:10px;\">o te da miedo aumentar las ventas porque sabes lo que significaría para tu operativa actual</li></ul><p style=\"color:#f2f5fb; font-size:18px; line-height:1.65; max-width:720px; margin-top:20px;\">Si has construido un negocio que funciona pero empiezas a sentir que te está tragando, tenemos una conversación pendiente.</p>\n    <div style=\"display:flex; justify-content:flex-start; margin-top:8px;\">\n      <a href=\"https://app.somosnexia.com/demo\" style=\"display:inline-flex; align-items:center; gap:10px;\n        border-radius:4px; padding:15px 28px; font-weight:500; font-size:14px;\n        letter-spacing:0.04em; text-transform:uppercase; background:#2e4be2;\n        color:#f2f5fb; text-decoration:none; font-family:'IBM Plex Mono', ui-monospace, monospace;\">\n        Quiero contaros mi caso <span aria-hidden=\"true\">&rarr;</span>\n      </a>\n    </div>\n    \n    </div>\n    "
               },
               "elements": []
             }
@@ -322,22 +322,22 @@
       ]
     },
     {
-      "id": "bdca4a1",
+      "id": "a0d61ca",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#050b14"
+        "background_color": "#05070d"
       },
       "elements": [
         {
-          "id": "88c487e",
+          "id": "efc1304",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "9c5ad6d",
+              "id": "04fa59b",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -349,11 +349,11 @@
               "elements": []
             },
             {
-              "id": "c5472ed",
+              "id": "1540fbd",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      <ul style=\"color:#f2f6f9; font-size:17px; line-height:1.6; padding-left:22px; max-width:720px;\"><li style=\"margin-bottom:10px;\">No somos una formación para aprender a emprender.</li><li style=\"margin-bottom:10px;\">No instalamos herramientas simplemente porque estén de moda.</li><li style=\"margin-bottom:10px;\">No llenamos tu negocio de automatizaciones que después nadie sabe mantener.</li><li style=\"margin-bottom:10px;\">Y no creemos que contratar más personas sea automáticamente la solución.</li></ul><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; margin-top:16px;\">Trabajamos sobre un negocio que ya existe. Miramos qué está pasando bajo la superficie. Y si no necesitas a Nexia, mejor saberlo antes de que saques la tarjeta.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:26px; font-weight:600; color:#ffb15c; text-align:center; margin-top:20px;\">Quitamos dependencia.</p>\n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      <ul style=\"color:#f2f5fb; font-size:17px; line-height:1.6; padding-left:22px; max-width:720px;\"><li style=\"margin-bottom:10px;\">No somos una formación para aprender a emprender.</li><li style=\"margin-bottom:10px;\">No instalamos herramientas simplemente porque estén de moda.</li><li style=\"margin-bottom:10px;\">No llenamos tu negocio de automatizaciones que después nadie sabe mantener.</li><li style=\"margin-bottom:10px;\">Y no creemos que contratar más personas sea automáticamente la solución.</li></ul><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; margin-top:16px;\">Trabajamos sobre un negocio que ya existe. Miramos qué está pasando bajo la superficie. Y si no necesitas a Nexia, mejor saberlo antes de que saques la tarjeta.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:26px; font-weight:600; color:#5b73ff; text-align:center; margin-top:20px;\">Quitamos dependencia.</p>\n    </div>\n    "
               },
               "elements": []
             }
@@ -362,22 +362,22 @@
       ]
     },
     {
-      "id": "b92b53e",
+      "id": "f67e75a",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#0d1c30"
+        "background_color": "#0c1226"
       },
       "elements": [
         {
-          "id": "3b138bc",
+          "id": "7bff8e0",
           "elType": "column",
           "settings": {
             "_column_size": 50
           },
           "elements": [
             {
-              "id": "3c10ac2",
+              "id": "459442d",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -389,29 +389,29 @@
               "elements": []
             },
             {
-              "id": "5d96ff3",
+              "id": "e6fccdb",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">Somos Pilar y Laura. Creamos Somos Nexia porque vimos crecer demasiados negocios: en clientes, herramientas, equipo y facturación, mientras sus dueñas tenían cada vez menos tiempo para dirigir.</p><p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; \">Nosotras entramos justo ahí: en la operativa que no se ve, ordenando procesos, sistemas, automatizaciones, documentación, integraciones e Inteligencia Artificial cuando aporta valor, para que el negocio avance sin depender de ti para todo.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:20px; font-weight:600; color:#f2f6f9; margin-top:12px;\">Tú marcas el rumbo.<br>Nosotras ejecutamos.</p>\n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">Somos Pilar y Laura. Creamos Somos Nexia porque vimos crecer demasiados negocios: en clientes, herramientas, equipo y facturación, mientras sus dueñas tenían cada vez menos tiempo para dirigir.</p><p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; \">Nosotras entramos justo ahí: en la operativa que no se ve, ordenando procesos, sistemas, automatizaciones, documentación, integraciones e Inteligencia Artificial cuando aporta valor, para que el negocio avance sin depender de ti para todo.</p><p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:20px; font-weight:600; color:#f2f5fb; margin-top:12px;\">Tú marcas el rumbo.<br>Nosotras ejecutamos.</p>\n    </div>\n    "
               },
               "elements": []
             }
           ]
         },
         {
-          "id": "7f2c101",
+          "id": "34bf8f8",
           "elType": "column",
           "settings": {
             "_column_size": 50
           },
           "elements": [
             {
-              "id": "ce13ef6",
+              "id": "9ba16b9",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      \n    <div style=\"background:#050b14; border:1px solid #1b3049; border-radius:24px; padding:32px;\">\n      <h3 style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:24px; font-weight:700; color:#4fe3c8; margin:0 0 16px;\">\n        Crecer también implica decidir qué huella dejamos\n      </h3>\n      <p style=\"color:#8ea3b8; font-size:16px; line-height:1.65;\">\n        El océano forma parte del universo de Somos Nexia, pero no queremos que se quede solo en una\n        metáfora. Por eso destinamos parte de nuestro compromiso como empresa a iniciativas vinculadas\n        con la regeneración y conservación de los ecosistemas marinos. Porque crecer mejor también\n        significa construir negocios más sostenibles y devolver parte de lo que generamos.\n      </p>\n      <p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:18px; font-weight:600; color:#ffb15c; margin-top:16px;\">\n        Crecer sí. Pero no a cualquier precio.\n      </p>\n    </div>\n    \n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      \n    <div style=\"background:#05070d; border:1px solid #1e2a4d; border-radius:24px; padding:32px;\">\n      <h3 style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:24px; font-weight:700; color:#5b73ff; margin:0 0 16px;\">\n        Crecer también implica decidir qué huella dejamos\n      </h3>\n      <p style=\"color:#96a3c4; font-size:16px; line-height:1.65;\">\n        El océano forma parte del universo de Somos Nexia, pero no queremos que se quede solo en una\n        metáfora. Por eso destinamos parte de nuestro compromiso como empresa a iniciativas vinculadas\n        con la regeneración y conservación de los ecosistemas marinos. Porque crecer mejor también\n        significa construir negocios más sostenibles y devolver parte de lo que generamos.\n      </p>\n      <p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:18px; font-weight:600; color:#5b73ff; margin-top:16px;\">\n        Crecer sí. Pero no a cualquier precio.\n      </p>\n    </div>\n    \n    </div>\n    "
               },
               "elements": []
             }
@@ -420,62 +420,62 @@
       ]
     },
     {
-      "id": "ab41ed3",
+      "id": "7daa226",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#050b14"
+        "background_color": "#05070d"
       },
       "elements": [
         {
-          "id": "d5ecf49",
+          "id": "cb8d8ed",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "cfcc837",
+              "id": "59491f3",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px 40px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      <h2 style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:32px; font-weight:700; color:#f2f6f9; text-align:center; margin:0;\">Si tienes dudas sobre Liberación Operativa, aquí te las respondemos</h2>\n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px 40px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      <h2 style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:32px; font-weight:700; color:#f2f5fb; text-align:center; margin:0;\">Si tienes dudas sobre Liberación Operativa, aquí te las respondemos</h2>\n    </div>\n    "
               },
               "elements": []
             },
             {
-              "id": "d1d30d8",
+              "id": "3de9f44",
               "elType": "widget",
               "widgetType": "accordion",
               "settings": {
                 "tabs": [
                   {
-                    "_id": "9276740",
+                    "_id": "d6458b2",
                     "tab_title": "¿Qué significa Liberación Operativa?",
                     "tab_content": "Es reducir la dependencia diaria que tiene un negocio de su dueña mediante procesos claros, sistemas, documentación, automatización y una mejor distribución de responsabilidades. El objetivo no es que desaparezcas de tu negocio. Es que el negocio no necesite una intervención tuya para cada tarea."
                   },
                   {
-                    "_id": "0581f3f",
-                    "tab_title": "¿Somos Nexia trabaja como agencia de IA?",
-                    "tab_content": "Sí, pero la Inteligencia Artificial es una de nuestras capacidades, no toda nuestra identidad. Somos una agencia de Liberación Operativa. Nuestra línea especializada en automatización avanzada y agentes de IA es Submarino NexIA™."
+                    "_id": "abd2bd1",
+                    "tab_title": "¿Somos Nexia trabaja como un equipo de IA?",
+                    "tab_content": "Sí, pero la Inteligencia Artificial es una de nuestras capacidades, no toda nuestra identidad. Somos el equipo técnico de Liberación Operativa. Nuestra línea especializada en automatización avanzada y agentes de IA es Submarino NexIA™."
                   },
                   {
-                    "_id": "63b71fd",
+                    "_id": "e85ccac",
                     "tab_title": "¿Qué procesos de un negocio digital se pueden automatizar?",
                     "tab_content": "Depende de cada operativa. Solemos trabajar sobre tareas repetitivas relacionadas con seguimiento, CRM, formularios, reservas, emails, atención, clasificación de leads, gestión de información, actualización de datos e integraciones entre herramientas. Primero revisamos el proceso. Después decidimos qué merece ser automatizado."
                   },
                   {
-                    "_id": "1390909",
+                    "_id": "42be890",
                     "tab_title": "¿Tengo que cambiar las herramientas que ya utilizo?",
                     "tab_content": "No necesariamente. Antes de añadir tecnología revisamos qué tienes, qué funciona, qué sobra y qué debería estar mejor conectado. No queremos una sala de máquinas más grande. Queremos una que funcione mejor."
                   },
                   {
-                    "_id": "67ba48b",
+                    "_id": "954b810",
                     "tab_title": "¿Somos Nexia hace estrategia o implementación?",
                     "tab_content": "Nuestro foco está en la implementación y la operativa. Tú marcas la dirección estratégica de tu negocio. Nosotras convertimos esa dirección en procesos, sistemas, automatizaciones e implementaciones que funcionen en el día a día."
                   },
                   {
-                    "_id": "a85ed44",
+                    "_id": "428e3fe",
                     "tab_title": "¿Qué servicios ofrece Somos Nexia?",
                     "tab_content": "Trabajamos mediante tres líneas: Delegación Técnica Puntual, para ejecutar necesidades concretas. Llave en Mano, para construir y conectar infraestructura digital. Submarino NexIA™, para reducir intervención manual mediante automatización e Inteligencia Artificial."
                   }
@@ -488,26 +488,26 @@
       ]
     },
     {
-      "id": "ec3fb1b",
+      "id": "1a2db1f",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#050b14"
+        "background_color": "#05070d"
       },
       "elements": [
         {
-          "id": "40b0334",
+          "id": "eca56f9",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "527c1a6",
+              "id": "a431ba4",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      \n    <div style=\"background:linear-gradient(to bottom, #0d1c30, #081525); border:1px solid #1b3049;\n      border-radius:32px; padding:64px 48px; text-align:center; max-width:760px; margin:0 auto;\">\n      <h2 style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:34px; font-weight:700; color:#f2f6f9; margin:0 0 20px;\">\n        Haz crecer tu negocio digital con menos dependencia operativa\n      </h2>\n      <p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; margin:0 0 12px;\">\n        Ahora toca construir una operativa capaz de sostener ese crecimiento. Sin más horas. Sin más\n        supervisión. Sin más interrupciones. Y sin que todo siga dependiendo de ti.\n      </p>\n      <p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; margin:0 0 24px;\">\n        Nos sumergimos en tu operativa, detectamos qué está frenando el negocio, ordenamos,\n        implementamos y automatizamos cuando tiene sentido.\n      </p>\n      <p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:20px; font-weight:600; color:#f2f6f9; margin:0 0 32px;\">\n        Tu empresa necesita tu visión.<br>No debería necesitarte para cada puta tarea.<br>Deja de hacerlo todo sola.\n      </p>\n      \n    <div style=\"display:flex; justify-content:center; margin-top:8px;\">\n      <a href=\"https://app.somosnexia.com/demo\" style=\"display:inline-flex; align-items:center; gap:8px;\n        border-radius:999px; padding:15px 28px; font-weight:600; font-size:14px;\n        letter-spacing:0.02em; text-transform:uppercase; background:#ffb15c;\n        color:#180d02; text-decoration:none; font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif;\">\n        Quiero liberar mi operativa <span aria-hidden=\"true\">&rarr;</span>\n      </a>\n    </div>\n    \n      <p style=\"color:#8ea3b8; font-size:14px; margin-top:16px;\">\n        Cuéntanos qué está pasando. Nosotras te diremos cuál es el siguiente paso.\n      </p>\n    </div>\n    \n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      \n    <div style=\"background:linear-gradient(to bottom, #0c1226, #090d1c); border:1px solid #1e2a4d;\n      border-radius:32px; padding:64px 48px; text-align:center; max-width:760px; margin:0 auto;\">\n      <h2 style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:34px; font-weight:700; color:#f2f5fb; margin:0 0 20px;\">\n        Haz crecer tu negocio digital con menos dependencia operativa\n      </h2>\n      <p style=\"color:#96a3c4; font-size:18px; line-height:1.65; margin:0 0 12px;\">\n        Ahora toca construir una operativa capaz de sostener ese crecimiento. Sin más horas. Sin más\n        supervisión. Sin más interrupciones. Y sin que todo siga dependiendo de ti.\n      </p>\n      <p style=\"color:#96a3c4; font-size:18px; line-height:1.65; margin:0 0 24px;\">\n        Nos sumergimos en tu operativa, detectamos qué está frenando el negocio, ordenamos,\n        implementamos y automatizamos cuando tiene sentido.\n      </p>\n      <p style=\"font-family:'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-size:20px; font-weight:600; color:#f2f5fb; margin:0 0 32px;\">\n        Tu empresa necesita tu visión.<br>No debería necesitarte para cada puta tarea.<br>Deja de hacerlo todo sola.\n      </p>\n      \n    <div style=\"display:flex; justify-content:center; margin-top:8px;\">\n      <a href=\"https://app.somosnexia.com/demo\" style=\"display:inline-flex; align-items:center; gap:10px;\n        border-radius:4px; padding:15px 28px; font-weight:500; font-size:14px;\n        letter-spacing:0.04em; text-transform:uppercase; background:#2e4be2;\n        color:#f2f5fb; text-decoration:none; font-family:'IBM Plex Mono', ui-monospace, monospace;\">\n        Quiero liberar mi operativa <span aria-hidden=\"true\">&rarr;</span>\n      </a>\n    </div>\n    \n      <p style=\"color:#96a3c4; font-size:14px; margin-top:16px;\">\n        Cuéntanos qué está pasando. Nosotras te diremos cuál es el siguiente paso.\n      </p>\n    </div>\n    \n    </div>\n    "
               },
               "elements": []
             }
@@ -516,22 +516,22 @@
       ]
     },
     {
-      "id": "bf73cff",
+      "id": "7f3ed12",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#0d1c30"
+        "background_color": "#0c1226"
       },
       "elements": [
         {
-          "id": "9b150e5",
+          "id": "6103d9e",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "0e8cb3e",
+              "id": "851df31",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -543,11 +543,11 @@
               "elements": []
             },
             {
-              "id": "c6f201f",
+              "id": "fe9fa2a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
-                "html": "\n    <div style=\"background:#050b14; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f6f9; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#8ea3b8; font-size:18px; line-height:1.65; max-width:720px; max-width:640px; margin:0 auto 24px; text-align:center;\">Activa el buzón de la comunidad Nexian. Recibirás ideas sólo para jefazas de negocios digitales sobre sistemas, automatización, IA, delegación, operativa y verdades incómodas sobre cómo construir un negocio que dependa cada vez menos de ti.</p><p style=\"text-align:center; color:#8ea3b8; font-size:14px; font-style:italic;\">[Aquí va el formulario de email de vuestro proveedor — Mailerlite/ActiveCampaign. No es un enlace de agenda, así que no lo he conectado al calendario.]</p>\n    </div>\n    "
+                "html": "\n    <div style=\"background:#05070d; padding:0 24px 96px; font-family:'Inter', ui-sans-serif, system-ui, sans-serif;\n      color:#f2f5fb; max-width:1120px; margin:0 auto;\">\n      <p style=\"color:#96a3c4; font-size:18px; line-height:1.65; max-width:720px; max-width:640px; margin:0 auto 24px; text-align:center;\">Activa el buzón de la comunidad Nexian. Recibirás ideas sólo para jefazas de negocios digitales sobre sistemas, automatización, IA, delegación, operativa y verdades incómodas sobre cómo construir un negocio que dependa cada vez menos de ti.</p><p style=\"text-align:center; color:#96a3c4; font-size:14px; font-style:italic;\">[Aquí va el formulario de email de vuestro proveedor — Mailerlite/ActiveCampaign. No es un enlace de agenda, así que no lo he conectado al calendario.]</p>\n    </div>\n    "
               },
               "elements": []
             }
@@ -558,7 +558,7 @@
   ],
   "page_settings": {
     "background_background": "classic",
-    "background_color": "#050b14"
+    "background_color": "#05070d"
   },
   "version": "0.4",
   "title": "Home — Somos Nexia (Nexia 3D)",

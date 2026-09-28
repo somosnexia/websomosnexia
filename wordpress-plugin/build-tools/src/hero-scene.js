@@ -1,9 +1,9 @@
 import * as THREE from "three";
 
 function initScene(container) {
-  const accent = container.dataset.accent || "#4fe3c8";
-  const signal = container.dataset.signal || "#ffb15c";
-  const coreColor = container.dataset.core || "#9df2df";
+  const accent = container.dataset.accent || "#5b73ff";
+  const signal = container.dataset.signal || "#2e4be2";
+  const coreColor = container.dataset.core || "#7c92ff";
 
   const reducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
@@ -23,7 +23,7 @@ function initScene(container) {
   renderer.setSize(container.clientWidth, container.clientHeight);
   container.appendChild(renderer.domElement);
 
-  scene.fog = new THREE.Fog(0x050b14, 6, 13);
+  scene.fog = new THREE.Fog(0x05070d, 6, 13);
   scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 
   // Núcleo tipo radar/sónar

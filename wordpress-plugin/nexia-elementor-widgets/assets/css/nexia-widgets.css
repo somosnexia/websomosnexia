@@ -1,15 +1,16 @@
-/* Somos Nexia — Elementor widgets: tokens visuales oceánicos */
+/* Somos Nexia — Elementor widgets: tokens visuales (azul de marca + negro, náutico/técnico) */
 .nexia-widgets-scope {
-  --nexia-bg: #050b14;
-  --nexia-bg-alt: #081525;
-  --nexia-surface: #0d1c30;
-  --nexia-border: #1b3049;
-  --nexia-fg: #f2f6f9;
-  --nexia-muted: #8ea3b8;
-  --nexia-accent: #4fe3c8;
-  --nexia-signal: #ffb15c;
+  --nexia-bg: #05070d;
+  --nexia-bg-alt: #090d1c;
+  --nexia-surface: #0c1226;
+  --nexia-border: #1e2a4d;
+  --nexia-fg: #f2f5fb;
+  --nexia-muted: #96a3c4;
+  --nexia-accent: #5b73ff;
+  --nexia-signal: #2e4be2;
   --nexia-font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --nexia-font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --nexia-font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 .nexia-widgets-scope,
@@ -20,12 +21,15 @@
 
 .nexia-widgets-scope h1,
 .nexia-widgets-scope h2,
-.nexia-widgets-scope h3,
+.nexia-widgets-scope h3 {
+  font-family: var(--nexia-font-display);
+}
+
 .nexia-widgets-scope .nexia-hero-3d__kicker,
 .nexia-widgets-scope .nexia-reveal-heading__kicker,
 .nexia-widgets-scope .nexia-step-card__number,
 .nexia-widgets-scope .nexia-hero-3d__cta {
-  font-family: var(--nexia-font-display);
+  font-family: var(--nexia-font-mono);
 }
 
 /* ---------- Hero 3D ---------- */
@@ -63,9 +67,9 @@
 }
 
 .nexia-hero-3d__kicker {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 12px;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--nexia-accent);
   margin: 0 0 16px;
@@ -90,23 +94,23 @@
 .nexia-hero-3d__cta {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  border-radius: 999px;
+  gap: 10px;
+  border-radius: 4px;
   padding: 15px 28px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   background: var(--nexia-signal);
-  color: #180d02;
+  color: #f2f5fb;
   text-decoration: none;
   transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .nexia-hero-3d__cta:hover {
-  transform: translateY(-2px) scale(1.02);
-  background: #ffd39b;
-  color: #180d02;
+  transform: translateY(-2px);
+  background: var(--nexia-accent);
+  color: #05070d;
 }
 
 /* ---------- Reveal Heading ---------- */
@@ -135,9 +139,9 @@
 }
 
 .nexia-reveal-heading__kicker {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 12px;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--nexia-accent);
   margin: 0 0 12px;
@@ -167,7 +171,7 @@
 .nexia-step-card {
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: 8px;
   border: 1px solid var(--nexia-border);
   background: var(--nexia-surface);
   padding: 32px;
@@ -175,15 +179,16 @@
 }
 
 .nexia-step-card:hover {
-  border-color: rgba(79, 227, 200, 0.6);
+  border-color: rgba(91, 115, 255, 0.6);
   transform: translateY(-4px);
 }
 
 .nexia-step-card__number {
   display: block;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
-  color: var(--nexia-signal);
+  letter-spacing: 0.08em;
+  color: var(--nexia-accent);
   margin-bottom: 12px;
 }
 

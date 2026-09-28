@@ -19,17 +19,18 @@ import uuid
 
 DEMO_URL = "https://app.somosnexia.com/demo"
 
-BG = "#050b14"
-BG_ALT = "#081525"
-SURFACE = "#0d1c30"
-BORDER = "#1b3049"
-FG = "#f2f6f9"
-MUTED = "#8ea3b8"
-ACCENT = "#4fe3c8"
-SIGNAL = "#ffb15c"
+BG = "#05070d"
+BG_ALT = "#090d1c"
+SURFACE = "#0c1226"
+BORDER = "#1e2a4d"
+FG = "#f2f5fb"
+MUTED = "#96a3c4"
+ACCENT = "#5b73ff"
+SIGNAL = "#2e4be2"
 
 FONT_DISPLAY = "'Space Grotesk', ui-sans-serif, system-ui, sans-serif"
 FONT_BODY = "'Inter', ui-sans-serif, system-ui, sans-serif"
+FONT_MONO = "'IBM Plex Mono', ui-monospace, monospace"
 
 
 def eid():
@@ -40,10 +41,10 @@ def cta_html(label, url=DEMO_URL, align="left"):
     justify = {"left": "flex-start", "center": "center"}.get(align, "flex-start")
     return f"""
     <div style="display:flex; justify-content:{justify}; margin-top:8px;">
-      <a href="{url}" style="display:inline-flex; align-items:center; gap:8px;
-        border-radius:999px; padding:15px 28px; font-weight:600; font-size:14px;
-        letter-spacing:0.02em; text-transform:uppercase; background:{SIGNAL};
-        color:#180d02; text-decoration:none; font-family:{FONT_DISPLAY};">
+      <a href="{url}" style="display:inline-flex; align-items:center; gap:10px;
+        border-radius:4px; padding:15px 28px; font-weight:500; font-size:14px;
+        letter-spacing:0.04em; text-transform:uppercase; background:{SIGNAL};
+        color:{FG}; text-decoration:none; font-family:{FONT_MONO};">
         {label} <span aria-hidden="true">&rarr;</span>
       </a>
     </div>
@@ -104,7 +105,7 @@ def hero_3d_widget():
             "kicker": "Liberación operativa para negocios digitales",
             "heading": "Tu negocio no necesita más horas tuyas. Necesita dejar de depender de ti.",
             "body": (
-                "Somos Nexia es una agencia de Liberación Operativa para negocios "
+                "Somos Nexia, el equipo técnico de Liberación Operativa para negocios "
                 "digitales. Ordenamos procesos, implementamos sistemas y utilizamos "
                 "automatización e Inteligencia Artificial cuando ayudan a reducir "
                 "todo ese trabajo que sigue dependiendo innecesariamente de ti o de "
@@ -114,7 +115,7 @@ def hero_3d_widget():
             "cta_link": {"url": DEMO_URL, "is_external": "", "nofollow": ""},
             "color_accent": ACCENT,
             "color_signal": SIGNAL,
-            "color_core": "#9df2df",
+            "color_core": "#7c92ff",
             "min_height": {"unit": "vh", "size": 92, "sizes": []},
         },
         "elements": [],
@@ -161,8 +162,8 @@ def accordion_widget():
             "Es reducir la dependencia diaria que tiene un negocio de su dueña mediante procesos claros, sistemas, documentación, automatización y una mejor distribución de responsabilidades. El objetivo no es que desaparezcas de tu negocio. Es que el negocio no necesite una intervención tuya para cada tarea.",
         ),
         (
-            "¿Somos Nexia trabaja como agencia de IA?",
-            "Sí, pero la Inteligencia Artificial es una de nuestras capacidades, no toda nuestra identidad. Somos una agencia de Liberación Operativa. Nuestra línea especializada en automatización avanzada y agentes de IA es Submarino NexIA™.",
+            "¿Somos Nexia trabaja como un equipo de IA?",
+            "Sí, pero la Inteligencia Artificial es una de nuestras capacidades, no toda nuestra identidad. Somos el equipo técnico de Liberación Operativa. Nuestra línea especializada en automatización avanzada y agentes de IA es Submarino NexIA™.",
         ),
         (
             "¿Qué procesos de un negocio digital se pueden automatizar?",
@@ -294,7 +295,7 @@ scale_html = wrap(
                 "para avanzar y cada tarea depende de una acción tuya... sigues siendo imprescindible "
                 "para la operativa."
             ),
-            f'<p style="font-family:{FONT_DISPLAY}; font-size:26px; font-weight:600; color:{SIGNAL}; margin:20px 0;">Y ser imprescindible está guay hasta que quieres apagar el portátil.</p>',
+            f'<p style="font-family:{FONT_DISPLAY}; font-size:26px; font-weight:600; color:{ACCENT}; margin:20px 0;">Y ser imprescindible está guay hasta que quieres apagar el portátil.</p>',
             p(
                 "Entonces la cosa se complica y empiezas a sentir que el negocio te ahoga. "
                 "Necesitas que el negocio avance sin depender de ti para toooodo."
@@ -344,9 +345,9 @@ sections.append(
 delegable_html = wrap(
     "".join(
         [
-            p("Quizá ya lo intentaste. Contrataste una asistente. Un freelance. Una agencia."),
+            p("Quizá ya lo intentaste. Contrataste una asistente. Un freelance. Una consultora."),
             p("Explicaste una tarea. La entregaron. Y terminaste repasándola, corrigiéndola o directamente haciéndola tú otra vez."),
-            f'<p style="font-family:{FONT_DISPLAY}; font-style:italic; font-size:22px; color:{SIGNAL}; margin:24px 0;">«Delegar me da más trabajo que hacerlo yo».</p>',
+            f'<p style="font-family:{FONT_DISPLAY}; font-style:italic; font-size:22px; color:{ACCENT}; margin:24px 0;">«Delegar me da más trabajo que hacerlo yo».</p>',
             p(
                 "Pero hay otro diagnóstico posible. Tal vez intentaste delegar un proceso que nunca "
                 "estuvo realmente construido. Porque si el criterio está en tu cabeza, la información "
@@ -468,7 +469,7 @@ notfor_html = wrap(
                 "superficie. Y si no necesitas a Nexia, mejor saberlo antes de que saques la tarjeta.",
                 extra="margin-top:16px;",
             ),
-            f'<p style="font-family:{FONT_DISPLAY}; font-size:26px; font-weight:600; color:{SIGNAL}; text-align:center; margin-top:20px;">Quitamos dependencia.</p>',
+            f'<p style="font-family:{FONT_DISPLAY}; font-size:26px; font-weight:600; color:{ACCENT}; text-align:center; margin-top:20px;">Quitamos dependencia.</p>',
         ]
     ),
     pad="0 24px 96px",
@@ -514,7 +515,7 @@ about_right = wrap(
         con la regeneración y conservación de los ecosistemas marinos. Porque crecer mejor también
         significa construir negocios más sostenibles y devolver parte de lo que generamos.
       </p>
-      <p style="font-family:{FONT_DISPLAY}; font-size:18px; font-weight:600; color:{SIGNAL}; margin-top:16px;">
+      <p style="font-family:{FONT_DISPLAY}; font-size:18px; font-weight:600; color:{ACCENT}; margin-top:16px;">
         Crecer sí. Pero no a cualquier precio.
       </p>
     </div>

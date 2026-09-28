@@ -50,7 +50,7 @@ export default function NewsletterSection() {
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-full bg-signal px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide text-[#180d02] transition-colors hover:bg-signal-soft"
+                className="shrink-0 rounded-full bg-signal px-6 py-3.5 font-display text-sm font-semibold uppercase tracking-wide text-foreground transition-colors hover:bg-signal-soft"
               >
                 {newsletter.cta}
               </button>

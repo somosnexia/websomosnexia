@@ -17,7 +17,7 @@ export const nav = [
 export const hero = {
   antetitulo: "Liberación operativa para negocios digitales",
   h1: "Tu negocio no necesita más horas tuyas. Necesita dejar de depender de ti.",
-  body: "Somos Nexia es una agencia de Liberación Operativa para negocios digitales. Ordenamos procesos, implementamos sistemas y utilizamos automatización e Inteligencia Artificial cuando ayudan a reducir todo ese trabajo que sigue dependiendo innecesariamente de ti o de tu equipo, para que tengas menos tareas y más tiempo para crecer.",
+  body: "Somos Nexia, el equipo técnico de Liberación Operativa para negocios digitales. Ordenamos procesos, implementamos sistemas y utilizamos automatización e Inteligencia Artificial cuando ayudan a reducir todo ese trabajo que sigue dependiendo innecesariamente de ti o de tu equipo, para que tengas menos tareas y más tiempo para crecer.",
   lines: ["Tú marcas el rumbo.", "Nosotras hacemos que la sala de máquinas funcione sin que tengas que bajar a tocar cada palanca."],
   cta: "Quiero liberar mi operativa",
   ctaSub: "Empieza con un diagnóstico de tu negocio con nuestro RADAR NEXIA.",
@@ -83,7 +83,7 @@ export const delegable = {
   kicker: "Antes de delegar",
   h2: "Antes de delegar, hacemos que tu negocio sea delegable",
   story: [
-    "Quizá ya lo intentaste. Contrataste una asistente. Un freelance. Una agencia.",
+    "Quizá ya lo intentaste. Contrataste una asistente. Un freelance. Una consultora.",
     "Explicaste una tarea. La entregaron. Y terminaste repasándola, corrigiéndola o directamente haciéndola tú otra vez.",
   ],
   quote: "«Delegar me da más trabajo que hacerlo yo».",
@@ -149,8 +149,8 @@ export const faqs = [
     a: "Es reducir la dependencia diaria que tiene un negocio de su dueña mediante procesos claros, sistemas, documentación, automatización y una mejor distribución de responsabilidades. El objetivo no es que desaparezcas de tu negocio. Es que el negocio no necesite una intervención tuya para cada tarea.",
   },
   {
-    q: "¿Somos Nexia trabaja como agencia de IA?",
-    a: "Sí, pero la Inteligencia Artificial es una de nuestras capacidades, no toda nuestra identidad. Somos una agencia de Liberación Operativa. Nuestra línea especializada en automatización avanzada y agentes de IA es Submarino NexIA™.",
+    q: "¿Somos Nexia trabaja como un equipo de IA?",
+    a: "Sí, pero la Inteligencia Artificial es una de nuestras capacidades, no toda nuestra identidad. Somos el equipo técnico de Liberación Operativa. Nuestra línea especializada en automatización avanzada y agentes de IA es Submarino NexIA™.",
   },
   {
     q: "¿Qué procesos de un negocio digital se pueden automatizar?",

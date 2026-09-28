@@ -33,7 +33,7 @@ function Particles({ count = 900 }: { count?: number }) {
       </bufferGeometry>
       <pointsMaterial
         size={0.028}
-        color="#4fe3c8"
+        color="#5b73ff"
         transparent
         opacity={0.75}
         sizeAttenuation
@@ -79,19 +79,19 @@ function SonarCore() {
     <group ref={group}>
       <mesh>
         <icosahedronGeometry args={[1.35, 1]} />
-        <meshBasicMaterial color="#9df2df" wireframe transparent opacity={0.55} />
+        <meshBasicMaterial color="#7c92ff" wireframe transparent opacity={0.55} />
       </mesh>
       <mesh>
         <icosahedronGeometry args={[0.68, 0]} />
-        <meshBasicMaterial color="#ffb15c" wireframe transparent opacity={0.85} />
+        <meshBasicMaterial color="#2e4be2" wireframe transparent opacity={0.85} />
       </mesh>
       <mesh ref={ring1} rotation={[Math.PI / 2, 0, 0]}>
         <ringGeometry args={[1.5, 1.54, 64]} />
-        <meshBasicMaterial color="#4fe3c8" transparent opacity={0.4} side={THREE.DoubleSide} />
+        <meshBasicMaterial color="#5b73ff" transparent opacity={0.4} side={THREE.DoubleSide} />
       </mesh>
       <mesh ref={ring2} rotation={[Math.PI / 2, 0, 0]}>
         <ringGeometry args={[1.5, 1.54, 64]} />
-        <meshBasicMaterial color="#4fe3c8" transparent opacity={0.4} side={THREE.DoubleSide} />
+        <meshBasicMaterial color="#5b73ff" transparent opacity={0.4} side={THREE.DoubleSide} />
       </mesh>
     </group>
   );
