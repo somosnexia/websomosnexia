@@ -22,3 +22,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# build output (regenerar con `zip -r nexia-elementor-widgets.zip nexia-elementor-widgets` en wordpress-plugin/)
+wordpress-plugin/*.zip
