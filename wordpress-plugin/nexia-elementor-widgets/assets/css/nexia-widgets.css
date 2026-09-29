@@ -113,6 +113,191 @@
   color: #05070d;
 }
 
+/* ---------- Hero Radar (sin submarino: radar + red de nodos + olas) ---------- */
+.nexia-hero-radar {
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: clamp(64px, 10vw, 140px) clamp(20px, 6vw, 72px);
+  color: #fff;
+}
+
+.nexia-hero-radar__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    var(--nexia-hero-g1, #1f45e0) 0%,
+    var(--nexia-hero-g2, #0f2fae) 45%,
+    var(--nexia-hero-g3, #071b6e) 100%
+  );
+}
+
+.nexia-hero-radar__nodes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.18;
+}
+
+.nexia-hero-radar__pulses {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.nexia-hero-radar__pulse {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  animation: nx-pulse 3.6s ease-in-out infinite;
+}
+
+@keyframes nx-pulse {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.8); }
+}
+
+.nexia-hero-radar__radar {
+  position: absolute;
+  left: 78%;
+  top: 56%;
+  width: min(560px, 78vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .nexia-hero-radar__radar {
+    left: 50%;
+    opacity: 0.5;
+  }
+}
+
+.nexia-hero-radar__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.nexia-hero-radar__ring--outer {
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.nexia-hero-radar__axis {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.nexia-hero-radar__axis--v {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+.nexia-hero-radar__axis--h {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+.nexia-hero-radar__sweep {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0) 0deg,
+    rgba(255, 255, 255, 0) 270deg,
+    rgba(255, 255, 255, 0.4) 360deg
+  );
+  animation: nx-sweep 8s linear infinite;
+}
+
+@keyframes nx-sweep {
+  to { transform: rotate(360deg); }
+}
+
+.nexia-hero-radar__blip {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 14px 3px rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  animation: nx-blip 8s linear infinite;
+}
+
+@keyframes nx-blip {
+  0% { opacity: 0; }
+  4% { opacity: 1; }
+  30%, 100% { opacity: 0; }
+}
+
+.nexia-hero-radar__wave {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 200%;
+  height: 150px;
+  display: block;
+  animation: nx-wave 22s linear infinite;
+}
+
+.nexia-hero-radar__wave--2 {
+  height: 115px;
+  animation-duration: 14s;
+  animation-direction: reverse;
+}
+
+.nexia-hero-radar__wave--3 {
+  height: 80px;
+  animation-duration: 9s;
+}
+
+@keyframes nx-wave {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.nexia-hero-radar__lines {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--nexia-fg);
+  margin: 18px 0 28px;
+}
+
+.nexia-hero-radar__lines p {
+  margin: 0;
+  color: var(--nexia-fg);
+}
+
+.nexia-hero-radar__note {
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexia-hero-radar__pulse,
+  .nexia-hero-radar__sweep,
+  .nexia-hero-radar__blip,
+  .nexia-hero-radar__wave {
+    animation: none !important;
+  }
+}
+
 /* ---------- Reveal Heading ---------- */
 .nexia-reveal {
   opacity: 0;

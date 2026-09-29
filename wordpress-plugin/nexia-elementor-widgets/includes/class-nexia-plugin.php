@@ -92,11 +92,13 @@ final class Nexia_Plugin
     public function register_widgets($widgets_manager)
     {
         require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-hero-3d-widget.php';
+        require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-hero-radar-widget.php';
         require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-reveal-heading-widget.php';
         require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-method-steps-widget.php';
         require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-engine-room-widget.php';
 
         $widgets_manager->register(new \Nexia_Hero_3D_Widget());
+        $widgets_manager->register(new \Nexia_Hero_Radar_Widget());
         $widgets_manager->register(new \Nexia_Reveal_Heading_Widget());
         $widgets_manager->register(new \Nexia_Method_Steps_Widget());
         $widgets_manager->register(new \Nexia_Engine_Room_Widget());

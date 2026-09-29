@@ -1,37 +1,67 @@
 {
   "content": [
     {
-      "id": "39e5a63",
+      "id": "ad84f2a",
       "elType": "section",
-      "settings": {},
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#071b6e"
+      },
       "elements": [
         {
-          "id": "ff1db08",
+          "id": "6a1878a",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "2cd7af0",
+              "id": "1db807c",
               "elType": "widget",
-              "widgetType": "nexia_hero_3d",
+              "widgetType": "html",
+              "settings": {
+                "html": "\n    <div style=\"position:relative; z-index:2; max-width:1280px; margin:0 auto;\n      padding:18px 32px; display:flex; align-items:center; justify-content:space-between;\n      gap:24px; flex-wrap:wrap; font-family:'Poppins', ui-sans-serif, system-ui, sans-serif;\">\n      <a href=\"#\" style=\"display:flex;\">\n        <img src=\"/wp-content/plugins/nexia-elementor-widgets/assets/images/nexia-logo-color.png\" alt=\"Somos Nexia\" style=\"height:40px; width:auto;\">\n      </a>\n      <nav style=\"display:flex; align-items:center; gap:28px; flex-wrap:wrap;\">\n        <a href=\"#\" style=\"color:#f2f5fb; font-size:15px; text-decoration:none; font-family:'Poppins', ui-sans-serif, system-ui, sans-serif;\">Inicio</a><a href=\"#metodo\" style=\"color:#f2f5fb; font-size:15px; text-decoration:none; font-family:'Poppins', ui-sans-serif, system-ui, sans-serif;\">Método</a><a href=\"#equipo\" style=\"color:#f2f5fb; font-size:15px; text-decoration:none; font-family:'Poppins', ui-sans-serif, system-ui, sans-serif;\">Equipo</a><a href=\"#contacto\" style=\"color:#f2f5fb; font-size:15px; text-decoration:none; font-family:'Poppins', ui-sans-serif, system-ui, sans-serif;\">Contacto</a>\n      </nav>\n    </div>\n    "
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3095bb0",
+      "elType": "section",
+      "settings": {},
+      "elements": [
+        {
+          "id": "d1428a0",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "8fc5288",
+              "elType": "widget",
+              "widgetType": "nexia_hero_radar",
               "settings": {
                 "kicker": "Liberación operativa para negocios digitales",
                 "heading": "Tu negocio no necesita más horas tuyas. Necesita dejar de depender de ti.",
                 "body": "Somos Nexia, el equipo técnico de Liberación Operativa para negocios digitales. Ordenamos procesos, implementamos sistemas y utilizamos automatización e Inteligencia Artificial cuando ayudan a reducir todo ese trabajo que sigue dependiendo innecesariamente de ti o de tu equipo, para que tengas menos tareas y más tiempo para crecer.",
+                "lines": "Tú marcas el rumbo.\nNosotras hacemos que la sala de máquinas funcione sin que tengas que bajar a tocar cada palanca.",
                 "cta_text": "Quiero liberar mi operativa",
                 "cta_link": {
                   "url": "https://app.somosnexia.com/demo",
                   "is_external": "",
                   "nofollow": ""
                 },
-                "color_accent": "#5b73ff",
-                "color_signal": "#2e4be2",
-                "color_core": "#c8d2ff",
+                "note": "Empieza con un diagnóstico de tu negocio con nuestro RADAR NEXIA.",
+                "gradient_1": "#1f45e0",
+                "gradient_2": "#0f2fae",
+                "gradient_3": "#071b6e",
                 "min_height": {
                   "unit": "vh",
-                  "size": 92,
+                  "size": 90,
                   "sizes": []
                 }
               },
@@ -42,7 +72,7 @@
       ]
     },
     {
-      "id": "a6f29aa",
+      "id": "3ddeafb",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -50,14 +80,14 @@
       },
       "elements": [
         {
-          "id": "3f53166",
+          "id": "e37df1e",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "58e8f1e",
+              "id": "be66f6d",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -69,7 +99,7 @@
               "elements": []
             },
             {
-              "id": "bf5d3b7",
+              "id": "b533581",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -82,7 +112,7 @@
       ]
     },
     {
-      "id": "cc99c05",
+      "id": "dc241ae",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -90,14 +120,14 @@
       },
       "elements": [
         {
-          "id": "4d38e74",
+          "id": "99f0e08",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "c02f7f7",
+              "id": "f14399d",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -109,7 +139,7 @@
               "elements": []
             },
             {
-              "id": "86ff283",
+              "id": "f21cc21",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -122,22 +152,23 @@
       ]
     },
     {
-      "id": "f8de51b",
+      "id": "4afff64",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#05070d"
+        "background_color": "#05070d",
+        "_element_id": "metodo"
       },
       "elements": [
         {
-          "id": "e792d92",
+          "id": "fa267c1",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "ac2e285",
+              "id": "fefae3a",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -149,7 +180,7 @@
               "elements": []
             },
             {
-              "id": "874314a",
+              "id": "06aa2cb",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -158,27 +189,27 @@
               "elements": []
             },
             {
-              "id": "71ab9c5",
+              "id": "6596fd0",
               "elType": "widget",
               "widgetType": "nexia_method_steps",
               "settings": {
                 "steps": [
                   {
-                    "_id": "1d975a6",
+                    "_id": "f82494e",
                     "number": "01",
                     "title": "Detectamos",
                     "body": "Localizamos tareas duplicadas, procesos manuales y puntos donde tu negocio sigue necesitando tu intervención.",
                     "sub": "Para descubrir dónde sigues siendo imprescindible sin necesitar serlo."
                   },
                   {
-                    "_id": "ca55a29",
+                    "_id": "f61a33a",
                     "number": "02",
                     "title": "Ordenamos",
                     "body": "Ponemos estructura en procesos, herramientas, responsabilidades, documentación y flujos de trabajo.",
                     "sub": "Para que tu negocio deje de vivir exclusivamente dentro de tu cabeza."
                   },
                   {
-                    "_id": "e805c36",
+                    "_id": "e56e024",
                     "number": "03",
                     "title": "Implementamos",
                     "body": "Creamos automatizaciones y sistemas operativos que funcionan en el día a día. Incorporamos Inteligencia Artificial cuando aporta valor.",
@@ -189,7 +220,7 @@
               "elements": []
             },
             {
-              "id": "89b9f26",
+              "id": "dd39e1b",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -202,47 +233,7 @@
       ]
     },
     {
-      "id": "9b769b8",
-      "elType": "section",
-      "settings": {
-        "background_background": "classic",
-        "background_color": "#090d1c"
-      },
-      "elements": [
-        {
-          "id": "22c3eaf",
-          "elType": "column",
-          "settings": {
-            "_column_size": 100
-          },
-          "elements": [
-            {
-              "id": "d3aa0ed",
-              "elType": "widget",
-              "widgetType": "nexia_engine_room",
-              "settings": {
-                "kicker": "Por dentro",
-                "title": "Así es la sala de máquinas de tu negocio cuando alguien la ordena.",
-                "text": "Radares que vigilan lo que importa, paneles que dejan de depender de tu memoria y sistemas que siguen funcionando aunque tú no estés mirando. Eso es lo que implementamos: la infraestructura invisible que sostiene tu operativa.",
-                "cta_text": "",
-                "cta_link": {
-                  "url": "",
-                  "is_external": "",
-                  "nofollow": ""
-                },
-                "visual_position": "right",
-                "color_accent": "#5b73ff",
-                "color_signal": "#2e4be2",
-                "color_core": "#c8d2ff"
-              },
-              "elements": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "f91bb03",
+      "id": "3ca494c",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -250,14 +241,14 @@
       },
       "elements": [
         {
-          "id": "6002c54",
+          "id": "95505f6",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "0bd486e",
+              "id": "be9b92b",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -269,7 +260,7 @@
               "elements": []
             },
             {
-              "id": "aca799d",
+              "id": "db55e07",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -282,7 +273,7 @@
       ]
     },
     {
-      "id": "88a127f",
+      "id": "39c1d88",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -290,14 +281,14 @@
       },
       "elements": [
         {
-          "id": "2a52daa",
+          "id": "a11d2c7",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "9993014",
+              "id": "64ef726",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -309,7 +300,7 @@
               "elements": []
             },
             {
-              "id": "d1af3bd",
+              "id": "c69b10a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -322,7 +313,7 @@
       ]
     },
     {
-      "id": "ddc0a82",
+      "id": "57874f3",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -330,14 +321,14 @@
       },
       "elements": [
         {
-          "id": "b8d0741",
+          "id": "0aefe3f",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "23144ae",
+              "id": "3115aec",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -349,7 +340,7 @@
               "elements": []
             },
             {
-              "id": "4beb09f",
+              "id": "181c59a",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -362,7 +353,7 @@
       ]
     },
     {
-      "id": "447f454",
+      "id": "e4d14d2",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -370,14 +361,14 @@
       },
       "elements": [
         {
-          "id": "7af956c",
+          "id": "445e295",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "243d09a",
+              "id": "57c8ed9",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -389,7 +380,7 @@
               "elements": []
             },
             {
-              "id": "a7b2da6",
+              "id": "e173dfd",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -402,22 +393,23 @@
       ]
     },
     {
-      "id": "bd6f220",
+      "id": "259eda0",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#0c1226"
+        "background_color": "#0c1226",
+        "_element_id": "equipo"
       },
       "elements": [
         {
-          "id": "0767710",
+          "id": "6a7462f",
           "elType": "column",
           "settings": {
             "_column_size": 50
           },
           "elements": [
             {
-              "id": "6ad8717",
+              "id": "d013de6",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -429,7 +421,7 @@
               "elements": []
             },
             {
-              "id": "b9430ef",
+              "id": "9b53830",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -440,14 +432,14 @@
           ]
         },
         {
-          "id": "0cc201f",
+          "id": "ea79bb0",
           "elType": "column",
           "settings": {
             "_column_size": 50
           },
           "elements": [
             {
-              "id": "6a67db3",
+              "id": "e38cf1d",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -460,7 +452,7 @@
       ]
     },
     {
-      "id": "49f5b05",
+      "id": "cd54305",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -468,14 +460,14 @@
       },
       "elements": [
         {
-          "id": "ba47c6f",
+          "id": "2e96ffb",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "2c64ccc",
+              "id": "dca3376",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -484,38 +476,38 @@
               "elements": []
             },
             {
-              "id": "0fbd37c",
+              "id": "71f30a1",
               "elType": "widget",
               "widgetType": "accordion",
               "settings": {
                 "tabs": [
                   {
-                    "_id": "b186669",
+                    "_id": "b3e35bd",
                     "tab_title": "¿Qué significa Liberación Operativa?",
                     "tab_content": "Es reducir la dependencia diaria que tiene un negocio de su dueña mediante procesos claros, sistemas, documentación, automatización y una mejor distribución de responsabilidades. El objetivo no es que desaparezcas de tu negocio. Es que el negocio no necesite una intervención tuya para cada tarea."
                   },
                   {
-                    "_id": "d7887cd",
+                    "_id": "c20cb90",
                     "tab_title": "¿Somos Nexia trabaja como un equipo de IA?",
                     "tab_content": "Sí, pero la Inteligencia Artificial es una de nuestras capacidades, no toda nuestra identidad. Somos el equipo técnico de Liberación Operativa. Nuestra línea especializada en automatización avanzada y agentes de IA es Submarino NexIA™."
                   },
                   {
-                    "_id": "b3d55c5",
+                    "_id": "2fbc12c",
                     "tab_title": "¿Qué procesos de un negocio digital se pueden automatizar?",
                     "tab_content": "Depende de cada operativa. Solemos trabajar sobre tareas repetitivas relacionadas con seguimiento, CRM, formularios, reservas, emails, atención, clasificación de leads, gestión de información, actualización de datos e integraciones entre herramientas. Primero revisamos el proceso. Después decidimos qué merece ser automatizado."
                   },
                   {
-                    "_id": "188e2fc",
+                    "_id": "4ce64e6",
                     "tab_title": "¿Tengo que cambiar las herramientas que ya utilizo?",
                     "tab_content": "No necesariamente. Antes de añadir tecnología revisamos qué tienes, qué funciona, qué sobra y qué debería estar mejor conectado. No queremos una sala de máquinas más grande. Queremos una que funcione mejor."
                   },
                   {
-                    "_id": "70928d1",
+                    "_id": "71ecfce",
                     "tab_title": "¿Somos Nexia hace estrategia o implementación?",
                     "tab_content": "Nuestro foco está en la implementación y la operativa. Tú marcas la dirección estratégica de tu negocio. Nosotras convertimos esa dirección en procesos, sistemas, automatizaciones e implementaciones que funcionen en el día a día."
                   },
                   {
-                    "_id": "25a070a",
+                    "_id": "be49169",
                     "tab_title": "¿Qué servicios ofrece Somos Nexia?",
                     "tab_content": "Trabajamos mediante tres líneas: Delegación Técnica Puntual, para ejecutar necesidades concretas. Llave en Mano, para construir y conectar infraestructura digital. Submarino NexIA™, para reducir intervención manual mediante automatización e Inteligencia Artificial."
                   }
@@ -528,22 +520,23 @@
       ]
     },
     {
-      "id": "4a3b477",
+      "id": "7905769",
       "elType": "section",
       "settings": {
         "background_background": "classic",
-        "background_color": "#05070d"
+        "background_color": "#05070d",
+        "_element_id": "contacto"
       },
       "elements": [
         {
-          "id": "10b825d",
+          "id": "d39e816",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "defbae9",
+              "id": "49dca13",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -556,7 +549,7 @@
       ]
     },
     {
-      "id": "21c17fe",
+      "id": "3687b2c",
       "elType": "section",
       "settings": {
         "background_background": "classic",
@@ -564,14 +557,14 @@
       },
       "elements": [
         {
-          "id": "8378916",
+          "id": "343cb98",
           "elType": "column",
           "settings": {
             "_column_size": 100
           },
           "elements": [
             {
-              "id": "900640a",
+              "id": "b05c71f",
               "elType": "widget",
               "widgetType": "nexia_reveal_heading",
               "settings": {
@@ -583,7 +576,7 @@
               "elements": []
             },
             {
-              "id": "56261d3",
+              "id": "204a791",
               "elType": "widget",
               "widgetType": "html",
               "settings": {

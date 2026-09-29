@@ -147,6 +147,66 @@ def engine_room_widget():
     }
 
 
+def hero_radar_widget():
+    return {
+        "id": eid(),
+        "elType": "widget",
+        "widgetType": "nexia_hero_radar",
+        "settings": {
+            "kicker": "Liberación operativa para negocios digitales",
+            "heading": "Tu negocio no necesita más horas tuyas. Necesita dejar de depender de ti.",
+            "body": (
+                "Somos Nexia, el equipo técnico de Liberación Operativa para negocios "
+                "digitales. Ordenamos procesos, implementamos sistemas y utilizamos "
+                "automatización e Inteligencia Artificial cuando ayudan a reducir "
+                "todo ese trabajo que sigue dependiendo innecesariamente de ti o de "
+                "tu equipo, para que tengas menos tareas y más tiempo para crecer."
+            ),
+            "lines": (
+                "Tú marcas el rumbo.\n"
+                "Nosotras hacemos que la sala de máquinas funcione sin que tengas "
+                "que bajar a tocar cada palanca."
+            ),
+            "cta_text": "Quiero liberar mi operativa",
+            "cta_link": {"url": DEMO_URL, "is_external": "", "nofollow": ""},
+            "note": "Empieza con un diagnóstico de tu negocio con nuestro RADAR NEXIA.",
+            "gradient_1": "#1f45e0",
+            "gradient_2": "#0f2fae",
+            "gradient_3": "#071b6e",
+            "min_height": {"unit": "vh", "size": 90, "sizes": []},
+        },
+        "elements": [],
+    }
+
+
+def header_widget():
+    logo_url = "/wp-content/plugins/nexia-elementor-widgets/assets/images/nexia-logo-color.png"
+    nav_links = [
+        ("Inicio", "#"),
+        ("Método", "#metodo"),
+        ("Equipo", "#equipo"),
+        ("Contacto", "#contacto"),
+    ]
+    links_html = "".join(
+        f'<a href="{href}" style="color:{FG}; font-size:15px; text-decoration:none;'
+        f' font-family:{FONT_BODY};">{label}</a>'
+        for label, href in nav_links
+    )
+    html = f"""
+    <div style="position:relative; z-index:2; max-width:1280px; margin:0 auto;
+      padding:18px 32px; display:flex; align-items:center; justify-content:space-between;
+      gap:24px; flex-wrap:wrap; font-family:{FONT_BODY};">
+      <a href="#" style="display:flex;">
+        <img src="{logo_url}" alt="Somos Nexia" style="height:40px; width:auto;">
+      </a>
+      <nav style="display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
+        {links_html}
+      </nav>
+    </div>
+    """
+    return html_widget(html)
+
+
 def method_steps_widget():
     steps = [
         {
@@ -220,7 +280,7 @@ def accordion_widget():
     }
 
 
-def section(widgets, bg=None):
+def section(widgets, bg=None, anchor=None):
     column = {
         "id": eid(),
         "elType": "column",
@@ -231,6 +291,8 @@ def section(widgets, bg=None):
     if bg:
         settings["background_background"] = "classic"
         settings["background_color"] = bg
+    if anchor:
+        settings["_element_id"] = anchor
     return {
         "id": eid(),
         "elType": "section",
@@ -239,7 +301,7 @@ def section(widgets, bg=None):
     }
 
 
-def two_col_section(left_widgets, right_widgets, bg=None):
+def two_col_section(left_widgets, right_widgets, bg=None, anchor=None):
     col_l = {
         "id": eid(),
         "elType": "column",
@@ -256,6 +318,8 @@ def two_col_section(left_widgets, right_widgets, bg=None):
     if bg:
         settings["background_background"] = "classic"
         settings["background_color"] = bg
+    if anchor:
+        settings["_element_id"] = anchor
     return {
         "id": eid(),
         "elType": "section",
@@ -266,8 +330,11 @@ def two_col_section(left_widgets, right_widgets, bg=None):
 
 sections = []
 
+# 0. Header (logo real + navegación por anclas)
+sections.append(section([header_widget()], bg="#071b6e"))
+
 # 1. Hero
-sections.append(section([hero_3d_widget()]))
+sections.append(section([hero_radar_widget()]))
 
 # 2. Problem
 problem_html = wrap(
@@ -363,11 +430,9 @@ sections.append(
             html_widget(method_cta_html),
         ],
         bg=BG,
+        anchor="metodo",
     )
 )
-
-# 4b. Sala de máquinas (visual)
-sections.append(section([engine_room_widget()], bg=BG_ALT))
 
 # 5. Delegable
 delegable_html = wrap(
@@ -558,6 +623,7 @@ sections.append(
         ],
         [html_widget(about_right)],
         bg=SURFACE,
+        anchor="equipo",
     )
 )
 
@@ -602,7 +668,7 @@ final_html = wrap(
     </div>
     """
 )
-sections.append(section([html_widget(final_html)], bg=BG))
+sections.append(section([html_widget(final_html)], bg=BG, anchor="contacto"))
 
 # 12. Newsletter (email capture note — not a call-booking CTA)
 newsletter_html = wrap(
