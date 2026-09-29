@@ -1,6 +1,8 @@
 # Plantilla de Home — Elementor
 
-`home-elementor-template.json` es una plantilla importable de Elementor con toda la Home montada: usa los 3 widgets de `nexia-elementor-widgets` (Hero 3D, Reveal Heading, Method Steps) combinados con el widget nativo de Elementor para el resto del copy real de la marca.
+`home-elementor-template.json` es una plantilla importable de Elementor con toda la Home montada: usa los widgets de `nexia-elementor-widgets` (Hero Radar, Reveal Heading, Method Steps) combinados con los widgets nativos de Elementor (`html`, `accordion`) para el resto del copy real de la marca.
+
+El logo se referencia desde `/wp-content/plugins/nexia-elementor-widgets/assets/images/nexia-logo-color.png`. Si vuestro plugin queda instalado con otro nombre de carpeta, hay que corregir esa ruta en el widget del logo (pestaña *Contenido* del Hero Radar) tras importar.
 
 **Todos los botones y CTAs abren `https://app.somosnexia.com/demo`** (agenda de demo/diagnóstico para leads nuevos), excepto el bloque de newsletter, que es una captura de email (no un enlace de agenda) y queda marcado como pendiente de conectar a vuestro proveedor (Mailerlite/ActiveCampaign).
 
