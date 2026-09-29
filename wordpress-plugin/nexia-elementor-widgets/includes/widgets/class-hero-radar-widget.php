@@ -6,6 +6,7 @@ if (!defined('ABSPATH')) {
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
+use Elementor\Repeater;
 
 class Nexia_Hero_Radar_Widget extends Widget_Base
 {
@@ -41,50 +42,50 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
             'tab' => Controls_Manager::TAB_CONTENT,
         ]);
 
-        $this->add_control('kicker', [
-            'label' => __('Antetítulo', 'nexia-elementor-widgets'),
-            'type' => Controls_Manager::TEXT,
-            'default' => 'Liberación operativa para negocios digitales',
+        $this->add_control('logo', [
+            'label' => __('Logo', 'nexia-elementor-widgets'),
+            'type' => Controls_Manager::MEDIA,
+            'default' => [
+                'url' => NEXIA_WIDGETS_URL . 'assets/images/nexia-logo-color.png',
+            ],
         ]);
 
-        $this->add_control('heading', [
-            'label' => __('Título (H1)', 'nexia-elementor-widgets'),
-            'type' => Controls_Manager::TEXTAREA,
-            'rows' => 3,
-            'default' => 'Tu negocio no necesita más horas tuyas. Necesita dejar de depender de ti.',
-        ]);
-
-        $this->add_control('body', [
+        $repeater = new Repeater();
+        $repeater->add_control('label', [
             'label' => __('Texto', 'nexia-elementor-widgets'),
-            'type' => Controls_Manager::TEXTAREA,
-            'rows' => 4,
-            'default' => 'Somos Nexia, el equipo técnico de Liberación Operativa para negocios digitales. Ordenamos procesos, implementamos sistemas y utilizamos automatización e Inteligencia Artificial cuando ayudan a reducir todo ese trabajo que sigue dependiendo innecesariamente de ti o de tu equipo, para que tengas menos tareas y más tiempo para crecer.',
-        ]);
-
-        $this->add_control('lines', [
-            'label' => __('Líneas destacadas (opcional, una por línea)', 'nexia-elementor-widgets'),
-            'type' => Controls_Manager::TEXTAREA,
-            'rows' => 3,
-            'default' => "Tú marcas el rumbo.\nNosotras hacemos que la sala de máquinas funcione sin que tengas que bajar a tocar cada palanca.",
-        ]);
-
-        $this->add_control('cta_text', [
-            'label' => __('Texto del botón', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::TEXT,
-            'default' => 'Quiero liberar mi operativa',
+            'default' => 'Enlace',
         ]);
-
-        $this->add_control('cta_link', [
-            'label' => __('Enlace del botón', 'nexia-elementor-widgets'),
+        $repeater->add_control('link', [
+            'label' => __('Enlace', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::URL,
-            'default' => ['url' => '#contacto'],
+            'default' => ['url' => '#'],
             'show_external' => false,
         ]);
 
-        $this->add_control('note', [
-            'label' => __('Nota bajo el botón (opcional)', 'nexia-elementor-widgets'),
+        $this->add_control('nav_items', [
+            'label' => __('Navegación', 'nexia-elementor-widgets'),
+            'type' => Controls_Manager::REPEATER,
+            'fields' => $repeater->get_controls(),
+            'default' => [
+                ['label' => 'Inicio', 'link' => ['url' => '#']],
+                ['label' => 'Método', 'link' => ['url' => '#metodo']],
+                ['label' => 'Equipo', 'link' => ['url' => '#equipo']],
+                ['label' => 'Contacto', 'link' => ['url' => '#contacto']],
+            ],
+            'title_field' => '{{{ label }}}',
+        ]);
+
+        $this->add_control('eyebrow', [
+            'label' => __('Antetítulo', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::TEXT,
-            'default' => 'Empieza con un diagnóstico de tu negocio con nuestro RADAR NEXIA.',
+            'default' => 'Marketing sin humo, ejecución sin rodeos',
+        ]);
+
+        $this->add_control('wordmark', [
+            'label' => __('Wordmark', 'nexia-elementor-widgets'),
+            'type' => Controls_Manager::TEXT,
+            'default' => 'Somos Nexia',
         ]);
 
         $this->end_controls_section();
@@ -116,7 +117,7 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
             'label' => __('Altura mínima (vh)', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::SLIDER,
             'range' => ['px' => ['min' => 40, 'max' => 100]],
-            'default' => ['size' => 90, 'unit' => 'px'],
+            'default' => ['size' => 100, 'unit' => 'px'],
             'size_units' => ['vh'],
             'selectors' => [
                 '{{WRAPPER}} .nexia-hero-radar' => 'min-height: {{SIZE}}{{UNIT}};',
@@ -146,14 +147,13 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
     protected function render()
     {
         $s = $this->get_settings_for_display();
-        $cta_url = !empty($s['cta_link']['url']) ? $s['cta_link']['url'] : '#contacto';
-        $target = !empty($s['cta_link']['is_external']) ? ' target="_blank"' : '';
-        $nofollow = !empty($s['cta_link']['nofollow']) ? ' rel="nofollow"' : '';
 
         $points = $this->node_points();
         $svg_points = implode(' ', array_map(function ($p) {
             return round($p[0] * 14.4, 1) . ',' . round($p[1] * 6, 1);
         }, $points));
+
+        $words = preg_split('/\s+/', trim($s['wordmark']));
         ?>
         <div
             class="nexia-widgets-scope nexia-hero-radar"
@@ -190,34 +190,29 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
                 <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--2" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="rgba(255,255,255,.28)"></path></svg>
                 <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--3" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="var(--nexia-bg)"></path></svg>
             </div>
-            <div class="nexia-hero-3d__content">
-                <?php if (!empty($s['kicker'])) : ?>
-                    <p class="nexia-hero-3d__kicker"><?php echo esc_html($s['kicker']); ?></p>
+
+            <div class="nexia-hero-radar__topbar">
+                <a href="#" class="nexia-hero-radar__logo-link">
+                    <img src="<?php echo esc_url($s['logo']['url']); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" class="nexia-hero-radar__logo">
+                </a>
+                <nav class="nexia-hero-radar__nav">
+                    <?php foreach ($s['nav_items'] as $item):
+                        $url = !empty($item['link']['url']) ? $item['link']['url'] : '#';
+                        ?>
+                        <a href="<?php echo esc_url($url); ?>"><?php echo esc_html($item['label']); ?></a>
+                    <?php endforeach; ?>
+                </nav>
+            </div>
+
+            <div class="nexia-hero-radar__wordmark-block">
+                <?php if (!empty($s['eyebrow'])) : ?>
+                    <span class="nexia-hero-radar__eyebrow"><?php echo esc_html($s['eyebrow']); ?></span>
                 <?php endif; ?>
-                <h1 class="nexia-hero-3d__heading"><?php echo esc_html($s['heading']); ?></h1>
-                <?php if (!empty($s['body'])) : ?>
-                    <p class="nexia-hero-3d__body"><?php echo esc_html($s['body']); ?></p>
-                <?php endif; ?>
-                <?php if (!empty($s['lines'])) : ?>
-                    <div class="nexia-hero-radar__lines">
-                        <?php foreach (preg_split('/\r\n|\r|\n/', trim($s['lines'])) as $line) : ?>
-                            <p><?php echo esc_html($line); ?></p>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
-                <?php if (!empty($s['cta_text'])) : ?>
-                    <a
-                        class="nexia-hero-3d__cta"
-                        href="<?php echo esc_url($cta_url); ?>"
-                        <?php echo $target . $nofollow; ?>
-                    >
-                        <?php echo esc_html($s['cta_text']); ?>
-                        <span aria-hidden="true">→</span>
-                    </a>
-                <?php endif; ?>
-                <?php if (!empty($s['note'])) : ?>
-                    <p class="nexia-hero-radar__note"><?php echo esc_html($s['note']); ?></p>
-                <?php endif; ?>
+                <div class="nexia-hero-radar__wordmark">
+                    <?php foreach ($words as $i => $word): ?>
+                        <span class="nexia-hero-radar__word-mask"><span class="nexia-hero-radar__word" style="animation-delay:<?php echo esc_attr(0.15 + $i * 0.2); ?>s;"><?php echo esc_html($word); ?></span></span><?php echo $i < count($words) - 1 ? ' ' : ''; ?>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
         <?php

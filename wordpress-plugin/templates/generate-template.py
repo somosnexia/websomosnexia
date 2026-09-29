@@ -19,14 +19,26 @@ import uuid
 
 DEMO_URL = "https://app.somosnexia.com/demo"
 
-BG = "#05070d"
-BG_ALT = "#090d1c"
-SURFACE = "#0c1226"
-BORDER = "#1e2a4d"
-FG = "#f2f5fb"
-MUTED = "#96a3c4"
-ACCENT = "#5b73ff"
-SIGNAL = "#2e4be2"
+# Estética clara (blanco) para el cuerpo de la landing. El hero y el CTA final
+# se quedan como bloques de color (azul) a propósito, a modo de contraste,
+# igual que en el paquete de diseño de referencia.
+BG = "#ffffff"
+BG_ALT = "#f3f5fb"
+SURFACE = "#f3f5fb"
+BORDER = "#e3e7f3"
+FG = "#14213d"
+MUTED = "#5b6474"
+ACCENT = "#2547f5"
+SIGNAL = "#1a34c9"
+HEADLINE = "#0a2a8a"
+
+# Colores fijos (no cambian con el tema) para los bloques que se quedan en
+# azul oscuro a propósito: hero, CTA final y footer.
+DARK_BG = "#05070c"
+DARK_SURFACE = "#0c1226"
+DARK_BORDER = "rgba(246,247,249,.14)"
+DARK_FG = "#f6f7f9"
+DARK_MUTED = "#c7cdd8"
 
 FONT_DISPLAY = "'Poppins', ui-sans-serif, system-ui, sans-serif"
 FONT_BODY = "'Poppins', ui-sans-serif, system-ui, sans-serif"
@@ -44,7 +56,7 @@ def cta_html(label, url=DEMO_URL, align="left"):
       <a href="{url}" style="display:inline-flex; align-items:center; gap:10px;
         border-radius:4px; padding:15px 28px; font-weight:500; font-size:14px;
         letter-spacing:0.04em; text-transform:uppercase; background:{SIGNAL};
-        color:{FG}; text-decoration:none; font-family:{FONT_MONO};">
+        color:#ffffff; text-decoration:none; font-family:{FONT_MONO};">
         {label} <span aria-hidden="true">&rarr;</span>
       </a>
     </div>
@@ -148,60 +160,68 @@ def engine_room_widget():
 
 
 def hero_radar_widget():
+    logo_url = "/wp-content/plugins/nexia-elementor-widgets/assets/images/nexia-logo-color.png"
     return {
         "id": eid(),
         "elType": "widget",
         "widgetType": "nexia_hero_radar",
         "settings": {
-            "kicker": "Liberación operativa para negocios digitales",
-            "heading": "Tu negocio no necesita más horas tuyas. Necesita dejar de depender de ti.",
-            "body": (
-                "Somos Nexia, el equipo técnico de Liberación Operativa para negocios "
-                "digitales. Ordenamos procesos, implementamos sistemas y utilizamos "
-                "automatización e Inteligencia Artificial cuando ayudan a reducir "
-                "todo ese trabajo que sigue dependiendo innecesariamente de ti o de "
-                "tu equipo, para que tengas menos tareas y más tiempo para crecer."
-            ),
-            "lines": (
-                "Tú marcas el rumbo.\n"
-                "Nosotras hacemos que la sala de máquinas funcione sin que tengas "
-                "que bajar a tocar cada palanca."
-            ),
-            "cta_text": "Quiero liberar mi operativa",
-            "cta_link": {"url": DEMO_URL, "is_external": "", "nofollow": ""},
-            "note": "Empieza con un diagnóstico de tu negocio con nuestro RADAR NEXIA.",
+            "logo": {"url": logo_url, "id": ""},
+            "nav_items": [
+                {"_id": eid(), "label": "Inicio", "link": {"url": "#", "is_external": "", "nofollow": ""}},
+                {"_id": eid(), "label": "Método", "link": {"url": "#metodo", "is_external": "", "nofollow": ""}},
+                {"_id": eid(), "label": "Equipo", "link": {"url": "#equipo", "is_external": "", "nofollow": ""}},
+                {"_id": eid(), "label": "Contacto", "link": {"url": "#contacto", "is_external": "", "nofollow": ""}},
+            ],
+            "eyebrow": "Marketing sin humo, ejecución sin rodeos",
+            "wordmark": "Somos Nexia",
             "gradient_1": "#1f45e0",
             "gradient_2": "#0f2fae",
             "gradient_3": "#071b6e",
-            "min_height": {"unit": "vh", "size": 90, "sizes": []},
+            "min_height": {"unit": "vh", "size": 100, "sizes": []},
         },
         "elements": [],
     }
 
 
-def header_widget():
-    logo_url = "/wp-content/plugins/nexia-elementor-widgets/assets/images/nexia-logo-color.png"
-    nav_links = [
-        ("Inicio", "#"),
-        ("Método", "#metodo"),
-        ("Equipo", "#equipo"),
-        ("Contacto", "#contacto"),
-    ]
-    links_html = "".join(
-        f'<a href="{href}" style="color:{FG}; font-size:15px; text-decoration:none;'
-        f' font-family:{FONT_BODY};">{label}</a>'
-        for label, href in nav_links
-    )
+def intro_widget():
+    photo_placeholder = f"""
+    <div style="aspect-ratio:1/1; border-radius:4px; border:1px dashed {BORDER};
+      background:{BG_ALT}; display:flex; align-items:center; justify-content:center;
+      color:{MUTED}; font-size:13px; font-family:{FONT_MONO}; text-align:center; padding:12px;">
+      Foto del equipo<br>(pendiente)
+    </div>
+    """
     html = f"""
-    <div style="position:relative; z-index:2; max-width:1280px; margin:0 auto;
-      padding:18px 32px; display:flex; align-items:center; justify-content:space-between;
-      gap:24px; flex-wrap:wrap; font-family:{FONT_BODY};">
-      <a href="#" style="display:flex;">
-        <img src="{logo_url}" alt="Somos Nexia" style="height:40px; width:auto;">
-      </a>
-      <nav style="display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
-        {links_html}
-      </nav>
+    <div style="max-width:1280px; margin:0 auto; padding:64px 32px 112px;
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,420px),1fr));
+      gap:64px; align-items:center;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:170px; gap:12px;">
+        <div style="grid-row:span 2;">{photo_placeholder}</div>
+        {photo_placeholder}
+        {photo_placeholder}
+        <div style="grid-column:span 2;">{photo_placeholder}</div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:24px; align-items:flex-start;">
+        <p style="margin:0; font-family:{FONT_MONO}; font-size:13px; letter-spacing:0.14em;
+          text-transform:uppercase; color:{ACCENT};">Liberación operativa para negocios digitales</p>
+        <h1 style="margin:0; font-family:{FONT_DISPLAY}; font-weight:800; font-size:clamp(34px,4.2vw,56px);
+          line-height:1.05; color:{HEADLINE};">Tu negocio no necesita más horas tuyas. Necesita dejar de
+          depender de ti.</h1>
+        <p style="margin:0; font-size:18px; line-height:1.6; color:{MUTED}; max-width:520px;">
+          Somos Nexia, el equipo técnico de Liberación Operativa para negocios digitales. Ordenamos
+          procesos, implementamos sistemas y utilizamos automatización e Inteligencia Artificial
+          cuando ayudan a reducir todo ese trabajo que sigue dependiendo innecesariamente de ti o de
+          tu equipo, para que tengas menos tareas y más tiempo para crecer.
+        </p>
+        <p style="margin:0; font-family:{FONT_DISPLAY}; font-weight:600; font-size:18px; color:{FG};">
+          Tú marcas el rumbo. Nosotras hacemos que la sala de máquinas funcione sin que tengas que
+          bajar a tocar cada palanca.
+        </p>
+        {cta_html("Quiero liberar mi operativa")}
+        <p style="margin:0; font-size:14px; color:{MUTED};">Empieza con un diagnóstico de tu negocio
+          con nuestro RADAR NEXIA.</p>
+      </div>
     </div>
     """
     return html_widget(html)
@@ -280,7 +300,7 @@ def accordion_widget():
     }
 
 
-def section(widgets, bg=None, anchor=None):
+def section(widgets, bg=None, anchor=None, css_class=None):
     column = {
         "id": eid(),
         "elType": "column",
@@ -293,6 +313,8 @@ def section(widgets, bg=None, anchor=None):
         settings["background_color"] = bg
     if anchor:
         settings["_element_id"] = anchor
+    if css_class:
+        settings["_css_classes"] = css_class
     return {
         "id": eid(),
         "elType": "section",
@@ -301,7 +323,7 @@ def section(widgets, bg=None, anchor=None):
     }
 
 
-def two_col_section(left_widgets, right_widgets, bg=None, anchor=None):
+def two_col_section(left_widgets, right_widgets, bg=None, anchor=None, css_class=None):
     col_l = {
         "id": eid(),
         "elType": "column",
@@ -320,6 +342,8 @@ def two_col_section(left_widgets, right_widgets, bg=None, anchor=None):
         settings["background_color"] = bg
     if anchor:
         settings["_element_id"] = anchor
+    if css_class:
+        settings["_css_classes"] = css_class
     return {
         "id": eid(),
         "elType": "section",
@@ -330,11 +354,11 @@ def two_col_section(left_widgets, right_widgets, bg=None, anchor=None):
 
 sections = []
 
-# 0. Header (logo real + navegación por anclas)
-sections.append(section([header_widget()], bg="#071b6e"))
-
-# 1. Hero
+# 1. Hero (nav + logo + radar + red de nodos + olas + wordmark, todo dentro del widget)
 sections.append(section([hero_radar_widget()]))
+
+# 1b. Intro (fotos del equipo + titular real + CTA) — estética clara
+sections.append(section([intro_widget()], bg=BG, css_class="nexia-light"))
 
 # 2. Problem
 problem_html = wrap(
@@ -367,7 +391,7 @@ sections.append(
             ),
             html_widget(problem_html),
         ],
-        bg=BG,
+        bg=BG, css_class="nexia-light",
     )
 )
 
@@ -402,7 +426,7 @@ sections.append(
             reveal_heading_widget("La creencia", "Un negocio no escala porque dependa de su dueña", align="center"),
             html_widget(scale_html),
         ],
-        bg=SURFACE,
+        bg=SURFACE, css_class="nexia-light",
     )
 )
 
@@ -429,7 +453,7 @@ sections.append(
             method_steps_widget(),
             html_widget(method_cta_html),
         ],
-        bg=BG,
+        bg=BG, css_class="nexia-light",
         anchor="metodo",
     )
 )
@@ -467,7 +491,7 @@ sections.append(
             reveal_heading_widget("Antes de delegar", "Antes de delegar, hacemos que tu negocio sea delegable"),
             html_widget(delegable_html),
         ],
-        bg=SURFACE,
+        bg=SURFACE, css_class="nexia-light",
     )
 )
 
@@ -501,7 +525,7 @@ sections.append(
             reveal_heading_widget("", "¿Cómo podemos ayudarte a delegar?", align="center"),
             html_widget(how_html),
         ],
-        bg=BG,
+        bg=BG, css_class="nexia-light",
     )
 )
 
@@ -541,7 +565,7 @@ sections.append(
             reveal_heading_widget("¿Es para ti?", "¿Somos Nexia es para tu negocio?"),
             html_widget(fit_html),
         ],
-        bg=SURFACE,
+        bg=SURFACE, css_class="nexia-light",
     )
 )
 
@@ -573,7 +597,7 @@ sections.append(
             reveal_heading_widget("", "Esto no es para todo el mundo", align="center"),
             html_widget(notfor_html),
         ],
-        bg=BG,
+        bg=BG, css_class="nexia-light",
     )
 )
 
@@ -622,7 +646,7 @@ sections.append(
             html_widget(about_left),
         ],
         [html_widget(about_right)],
-        bg=SURFACE,
+        bg=BG_ALT, css_class="nexia-light",
         anchor="equipo",
     )
 )
@@ -638,37 +662,45 @@ sections.append(
             html_widget(faq_heading_html),
             accordion_widget(),
         ],
-        bg=BG,
+        bg=BG, css_class="nexia-light",
     )
 )
 
-# 11. Final CTA
+# 11. Final CTA — bloque azul intencionado (contraste sobre la estética clara),
+# igual que el CTA final del paquete de diseño de referencia.
 final_html = wrap(
     f"""
-    <div style="background:linear-gradient(to bottom, {SURFACE}, {BG_ALT}); border:1px solid {BORDER};
-      border-radius:32px; padding:64px 48px; text-align:center; max-width:760px; margin:0 auto;">
-      <h2 style="font-family:{FONT_DISPLAY}; font-size:34px; font-weight:700; color:{FG}; margin:0 0 20px;">
+    <div style="background:linear-gradient(180deg, #0a2a8a, #1a3fd6); border-radius:8px;
+      padding:64px 48px; text-align:center; max-width:900px; margin:0 auto; color:#ffffff;">
+      <h2 style="font-family:{FONT_DISPLAY}; font-size:clamp(30px,4vw,44px); font-weight:800; color:#ffffff; margin:0 0 20px;">
         Haz crecer tu negocio digital con menos dependencia operativa
       </h2>
-      <p style="color:{MUTED}; font-size:18px; line-height:1.65; margin:0 0 12px;">
+      <p style="color:rgba(255,255,255,.85); font-size:18px; line-height:1.65; margin:0 auto 12px; max-width:640px;">
         Ahora toca construir una operativa capaz de sostener ese crecimiento. Sin más horas. Sin más
         supervisión. Sin más interrupciones. Y sin que todo siga dependiendo de ti.
       </p>
-      <p style="color:{MUTED}; font-size:18px; line-height:1.65; margin:0 0 24px;">
+      <p style="color:rgba(255,255,255,.85); font-size:18px; line-height:1.65; margin:0 auto 24px; max-width:640px;">
         Nos sumergimos en tu operativa, detectamos qué está frenando el negocio, ordenamos,
         implementamos y automatizamos cuando tiene sentido.
       </p>
-      <p style="font-family:{FONT_DISPLAY}; font-size:20px; font-weight:600; color:{FG}; margin:0 0 32px;">
+      <p style="font-family:{FONT_DISPLAY}; font-size:20px; font-weight:600; color:#ffffff; margin:0 0 32px;">
         Tu empresa necesita tu visión.<br>No debería necesitarte para cada puta tarea.<br>Deja de hacerlo todo sola.
       </p>
-      {cta_html("Quiero liberar mi operativa", align="center")}
-      <p style="color:{MUTED}; font-size:14px; margin-top:16px;">
+      <div style="display:flex; justify-content:center;">
+        <a href="{DEMO_URL}" style="display:inline-flex; align-items:center; gap:10px; border-radius:4px;
+          padding:15px 28px; font-weight:600; font-size:15px; background:#ffffff; color:#0a2a8a;
+          text-decoration:none; font-family:{FONT_MONO};">
+          Quiero liberar mi operativa <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+      <p style="color:rgba(255,255,255,.75); font-size:14px; margin-top:16px;">
         Cuéntanos qué está pasando. Nosotras te diremos cuál es el siguiente paso.
       </p>
     </div>
-    """
+    """,
+    bg=BG,
 )
-sections.append(section([html_widget(final_html)], bg=BG, anchor="contacto"))
+sections.append(section([html_widget(final_html)], bg=BG, anchor="contacto", css_class="nexia-light"))
 
 # 12. Newsletter (email capture note — not a call-booking CTA)
 newsletter_html = wrap(
@@ -694,7 +726,7 @@ sections.append(
             reveal_heading_widget("Comunidad Nexians", "¿Quieres recibir señales desde la sala de máquinas?", align="center"),
             html_widget(newsletter_html),
         ],
-        bg=SURFACE,
+        bg=SURFACE, css_class="nexia-light",
     )
 )
 

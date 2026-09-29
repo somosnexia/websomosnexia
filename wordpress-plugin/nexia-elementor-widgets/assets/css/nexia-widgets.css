@@ -117,11 +117,111 @@
 .nexia-hero-radar {
   position: relative;
   overflow: hidden;
-  min-height: 90vh;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.nexia-hero-radar__topbar {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px clamp(16px, 4vw, 32px);
   display: flex;
   align-items: center;
-  padding: clamp(64px, 10vw, 140px) clamp(20px, 6vw, 72px);
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nexia-hero-radar__logo-link {
+  display: flex;
+}
+
+.nexia-hero-radar__logo {
+  height: 44px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.nexia-hero-radar__nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+
+.nexia-hero-radar__nav a {
   color: #fff;
+  text-decoration: none;
+}
+
+.nexia-hero-radar__nav a:hover {
+  opacity: 0.75;
+}
+
+.nexia-hero-radar__wordmark-block {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 64px clamp(16px, 4vw, 32px) 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.nexia-hero-radar__eyebrow {
+  font-family: var(--nexia-font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: nx-fade 1s ease 0.6s both;
+}
+
+@keyframes nx-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.nexia-hero-radar__wordmark {
+  font-family: var(--nexia-font-display);
+  font-weight: 800;
+  font-size: clamp(56px, 12vw, 180px);
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.nexia-hero-radar__word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 0 0.04em;
+}
+
+.nexia-hero-radar__word {
+  display: inline-block;
+  transform: translateY(105%);
+  animation: nx-rise 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes nx-rise {
+  from { transform: translateY(105%); }
+  to { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexia-hero-radar__eyebrow,
+  .nexia-hero-radar__word {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 .nexia-hero-radar__bg {
@@ -166,19 +266,12 @@
 
 .nexia-hero-radar__radar {
   position: absolute;
-  left: 78%;
-  top: 56%;
-  width: min(560px, 78vw);
+  left: 50%;
+  top: 54%;
+  width: min(640px, 92vw);
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
   pointer-events: none;
-}
-
-@media (max-width: 900px) {
-  .nexia-hero-radar__radar {
-    left: 50%;
-    opacity: 0.5;
-  }
 }
 
 .nexia-hero-radar__ring {
@@ -271,24 +364,6 @@
   to { transform: translateX(-50%); }
 }
 
-.nexia-hero-radar__lines {
-  font-weight: 600;
-  font-size: 18px;
-  color: var(--nexia-fg);
-  margin: 18px 0 28px;
-}
-
-.nexia-hero-radar__lines p {
-  margin: 0;
-  color: var(--nexia-fg);
-}
-
-.nexia-hero-radar__note {
-  margin: 14px 0 0;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .nexia-hero-radar__pulse,
   .nexia-hero-radar__sweep,
@@ -337,6 +412,7 @@
   line-height: 1.15;
   font-weight: 700;
   margin: 0 0 16px;
+  color: var(--nexia-fg);
 }
 
 .nexia-reveal-heading__text {
@@ -395,6 +471,44 @@
   font-size: 14px;
   color: var(--nexia-accent);
   margin: 0;
+}
+
+/* ---------- Tema claro (Home) ----------
+   El hero, el submarino y la sala de máquinas se quedan siempre en oscuro
+   (reservados para Submarino NexIA). El resto de la Home usa esta variante
+   clara sobre las secciones de Elementor marcadas con la clase "nexia-light". */
+.nexia-light .nexia-reveal-heading__kicker {
+  color: #2547f5;
+}
+
+.nexia-light .nexia-reveal-heading__title {
+  color: #0a2a8a;
+}
+
+.nexia-light .nexia-reveal-heading__text {
+  color: #5b6474;
+}
+
+.nexia-light .nexia-step-card {
+  background: #ffffff;
+  border-color: #dfe4f2;
+}
+
+.nexia-light .nexia-step-card:hover {
+  border-color: rgba(37, 71, 245, 0.5);
+}
+
+.nexia-light .nexia-step-card__number,
+.nexia-light .nexia-step-card__sub {
+  color: #2547f5;
+}
+
+.nexia-light .nexia-step-card__title {
+  color: #0a2a8a;
+}
+
+.nexia-light .nexia-step-card__body {
+  color: #5b6474;
 }
 
 /* ---------- Sala de Máquinas 3D ---------- */
