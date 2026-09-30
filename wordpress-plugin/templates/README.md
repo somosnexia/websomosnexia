@@ -13,6 +13,15 @@ El logo se referencia desde `/wp-content/plugins/nexia-elementor-widgets/assets/
 3. Abre la plantilla importada con Elementor y usa **Insertar plantilla** en la página donde quieras usarla (o duplica vuestra Home actual como borrador y pega ahí el contenido).
 4. El header/footer de vuestro sitio no están incluidos — siguen siendo los que ya tenéis en el Theme Builder de Elementor.
 
+## Alternativa: hero como bloque HTML suelto
+
+Si al importar la plantilla completa los márgenes/paddings salen mal (choques con el tema o
+con el sistema de columnas de Elementor), `hero-standalone.html` trae el mismo hero (logo,
+navegación, radar, red de nodos, olas, wordmark) como un único bloque HTML autónomo, con su
+propio `<style>` y clases con prefijo `nx-standalone-` para no chocar con nada. Instrucciones
+de uso dentro del propio archivo (cabecera en comentario). Pégalo en un widget nativo **HTML**
+de Elementor, dentro de una sección a ancho completo con padding 0.
+
 ## Regenerar la plantilla
 
 El JSON se genera con `generate-template.py` a partir del copy oficial (mismo contenido que `prototype-nextjs/src/lib/content.ts`). Si cambia algún texto:
