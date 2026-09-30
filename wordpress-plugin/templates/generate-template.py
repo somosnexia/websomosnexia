@@ -160,19 +160,11 @@ def engine_room_widget():
 
 
 def hero_radar_widget():
-    logo_url = "/wp-content/plugins/nexia-elementor-widgets/assets/images/nexia-logo-color.png"
     return {
         "id": eid(),
         "elType": "widget",
         "widgetType": "nexia_hero_radar",
         "settings": {
-            "logo": {"url": logo_url, "id": ""},
-            "nav_items": [
-                {"_id": eid(), "label": "Inicio", "link": {"url": "#", "is_external": "", "nofollow": ""}},
-                {"_id": eid(), "label": "Método", "link": {"url": "#metodo", "is_external": "", "nofollow": ""}},
-                {"_id": eid(), "label": "Equipo", "link": {"url": "#equipo", "is_external": "", "nofollow": ""}},
-                {"_id": eid(), "label": "Contacto", "link": {"url": "#contacto", "is_external": "", "nofollow": ""}},
-            ],
             "eyebrow": "Marketing sin humo, ejecución sin rodeos",
             "wordmark": "Somos Nexia",
             "gradient_1": "#1f45e0",

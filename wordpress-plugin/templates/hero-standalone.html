@@ -13,10 +13,8 @@
   4. Guarda y revisa en vista previa — el hero trae su propia altura (100vh) y su
      propio fondo, así que la sección que lo contiene no necesita nada más.
 
-  Si el logo no aparece: comprueba que el plugin nexia-elementor-widgets está
-  instalado y activo (la imagen vive en su carpeta assets/images/). Si prefieres
-  no depender del plugin para esto, sube el PNG a tu Biblioteca de medios y
-  reemplaza la URL del atributo src de la etiqueta <img> más abajo.
+  Sin logo ni menú de navegación: solo el fondo animado (radar, red de nodos,
+  olas) y el wordmark "Somos Nexia" centrados.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +26,7 @@
     position:relative; overflow:hidden; min-height:100vh; color:#fff;
     font-family:'Poppins', ui-sans-serif, system-ui, sans-serif;
     margin:0; padding:0;
+    display:flex; align-items:center; justify-content:center;
   }
   .nx-standalone-hero__bg{
     position:absolute; inset:0; z-index:0;
@@ -65,19 +64,9 @@
   .nx-standalone-hero__wave--3{height:80px; animation-duration:9s;}
   @keyframes nx-standalone-wave{from{transform:translateX(0);} to{transform:translateX(-50%);}}
 
-  .nx-standalone-hero__topbar{
-    position:relative; z-index:2; max-width:1280px; margin:0 auto;
-    padding:18px max(16px,4vw); display:flex; align-items:center;
-    justify-content:space-between; gap:24px; flex-wrap:wrap;
-  }
-  .nx-standalone-hero__topbar img{height:44px; width:auto; display:block; filter:brightness(0) invert(1);}
-  .nx-standalone-hero__nav{display:flex; align-items:center; gap:28px; flex-wrap:wrap; font-size:15px;}
-  .nx-standalone-hero__nav a{color:#fff; text-decoration:none;}
-  .nx-standalone-hero__nav a:hover{opacity:.75;}
-
   .nx-standalone-hero__wordmark-block{
     position:relative; z-index:1; text-align:center;
-    padding:64px max(16px,4vw) 190px; display:flex; flex-direction:column;
+    padding:32px max(16px,4vw); display:flex; flex-direction:column;
     align-items:center; gap:24px;
   }
   .nx-standalone-hero__eyebrow{
@@ -133,18 +122,6 @@
     <svg class="nx-standalone-hero__wave nx-standalone-hero__wave--1" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="rgba(255,255,255,.14)"></path></svg>
     <svg class="nx-standalone-hero__wave nx-standalone-hero__wave--2" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="rgba(255,255,255,.28)"></path></svg>
     <svg class="nx-standalone-hero__wave nx-standalone-hero__wave--3" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="#ffffff"></path></svg>
-  </div>
-
-  <div class="nx-standalone-hero__topbar">
-    <a href="/">
-      <img src="/wp-content/plugins/nexia-elementor-widgets/assets/images/nexia-logo-color.png" alt="Somos Nexia">
-    </a>
-    <nav class="nx-standalone-hero__nav">
-      <a href="/">Inicio</a>
-      <a href="#metodo">Método</a>
-      <a href="#equipo">Equipo</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
   </div>
 
   <div class="nx-standalone-hero__wordmark-block">

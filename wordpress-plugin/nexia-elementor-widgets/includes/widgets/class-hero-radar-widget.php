@@ -6,7 +6,6 @@ if (!defined('ABSPATH')) {
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
-use Elementor\Repeater;
 
 class Nexia_Hero_Radar_Widget extends Widget_Base
 {
@@ -40,40 +39,6 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
         $this->start_controls_section('content_section', [
             'label' => __('Contenido', 'nexia-elementor-widgets'),
             'tab' => Controls_Manager::TAB_CONTENT,
-        ]);
-
-        $this->add_control('logo', [
-            'label' => __('Logo', 'nexia-elementor-widgets'),
-            'type' => Controls_Manager::MEDIA,
-            'default' => [
-                'url' => NEXIA_WIDGETS_URL . 'assets/images/nexia-logo-color.png',
-            ],
-        ]);
-
-        $repeater = new Repeater();
-        $repeater->add_control('label', [
-            'label' => __('Texto', 'nexia-elementor-widgets'),
-            'type' => Controls_Manager::TEXT,
-            'default' => 'Enlace',
-        ]);
-        $repeater->add_control('link', [
-            'label' => __('Enlace', 'nexia-elementor-widgets'),
-            'type' => Controls_Manager::URL,
-            'default' => ['url' => '#'],
-            'show_external' => false,
-        ]);
-
-        $this->add_control('nav_items', [
-            'label' => __('Navegación', 'nexia-elementor-widgets'),
-            'type' => Controls_Manager::REPEATER,
-            'fields' => $repeater->get_controls(),
-            'default' => [
-                ['label' => 'Inicio', 'link' => ['url' => '#']],
-                ['label' => 'Método', 'link' => ['url' => '#metodo']],
-                ['label' => 'Equipo', 'link' => ['url' => '#equipo']],
-                ['label' => 'Contacto', 'link' => ['url' => '#contacto']],
-            ],
-            'title_field' => '{{{ label }}}',
         ]);
 
         $this->add_control('eyebrow', [
@@ -189,19 +154,6 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
                 <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--1" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="rgba(255,255,255,.14)"></path></svg>
                 <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--2" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="rgba(255,255,255,.28)"></path></svg>
                 <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--3" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="var(--nexia-bg)"></path></svg>
-            </div>
-
-            <div class="nexia-hero-radar__topbar">
-                <a href="#" class="nexia-hero-radar__logo-link">
-                    <img src="<?php echo esc_url($s['logo']['url']); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" class="nexia-hero-radar__logo">
-                </a>
-                <nav class="nexia-hero-radar__nav">
-                    <?php foreach ($s['nav_items'] as $item):
-                        $url = !empty($item['link']['url']) ? $item['link']['url'] : '#';
-                        ?>
-                        <a href="<?php echo esc_url($url); ?>"><?php echo esc_html($item['label']); ?></a>
-                    <?php endforeach; ?>
-                </nav>
             </div>
 
             <div class="nexia-hero-radar__wordmark-block">

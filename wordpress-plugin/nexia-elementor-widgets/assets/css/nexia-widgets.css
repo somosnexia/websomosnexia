@@ -119,54 +119,16 @@
   overflow: hidden;
   min-height: 100vh;
   color: #fff;
-}
-
-.nexia-hero-radar__topbar {
-  position: relative;
-  z-index: 2;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 18px clamp(16px, 4vw, 32px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.nexia-hero-radar__logo-link {
-  display: flex;
-}
-
-.nexia-hero-radar__logo {
-  height: 44px;
-  width: auto;
-  display: block;
-  filter: brightness(0) invert(1);
-}
-
-.nexia-hero-radar__nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
-  font-size: 15px;
-}
-
-.nexia-hero-radar__nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nexia-hero-radar__nav a:hover {
-  opacity: 0.75;
+  justify-content: center;
 }
 
 .nexia-hero-radar__wordmark-block {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 64px clamp(16px, 4vw, 32px) 190px;
+  padding: 32px clamp(16px, 4vw, 32px);
   display: flex;
   flex-direction: column;
   align-items: center;
