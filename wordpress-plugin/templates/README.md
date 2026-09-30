@@ -16,11 +16,20 @@ El logo se referencia desde `/wp-content/plugins/nexia-elementor-widgets/assets/
 ## Alternativa: hero como bloque HTML suelto
 
 Si al importar la plantilla completa los márgenes/paddings salen mal (choques con el tema o
-con el sistema de columnas de Elementor), `hero-standalone.html` trae el mismo hero (logo,
-navegación, radar, red de nodos, olas, wordmark) como un único bloque HTML autónomo, con su
+con el sistema de columnas de Elementor), `hero-standalone.html` trae el mismo hero (radar,
+red de nodos, olas, wordmark; sin logo ni menú) como un único bloque HTML autónomo, con su
 propio `<style>` y clases con prefijo `nx-standalone-` para no chocar con nada. Instrucciones
 de uso dentro del propio archivo (cabecera en comentario). Pégalo en un widget nativo **HTML**
 de Elementor, dentro de una sección a ancho completo con padding 0.
+
+## Sección "Antes de delegar" con motion
+
+`delegable-steps.html` es otro bloque HTML autónomo (mismo patrón que el hero): el relato de
+la sección "Antes de delegar" aparece línea a línea al hacer scroll, y la lista "Primero:
+documentamos, simplificamos..." se anima sola en bucle como un paso a paso automático (cada
+punto se enciende, se marca como hecho y pasa al siguiente). Instrucciones de uso dentro del
+propio archivo. Pégalo en un widget **HTML** de Elementor sustituyendo el texto plano de esa
+sección — no necesita una sección a ancho completo, trae su propio max-width interno.
 
 ## Regenerar la plantilla
 
