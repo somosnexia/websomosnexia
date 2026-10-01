@@ -440,15 +440,15 @@
    (reservados para Submarino NexIA). El resto de la Home usa esta variante
    clara sobre las secciones de Elementor marcadas con la clase "nexia-light". */
 .nexia-light .nexia-reveal-heading__kicker {
-  color: #2547f5;
+  color: #2547f5 !important;
 }
 
 .nexia-light .nexia-reveal-heading__title {
-  color: #0a2a8a;
+  color: #0a2a8a !important;
 }
 
 .nexia-light .nexia-reveal-heading__text {
-  color: #5b6474;
+  color: #5b6474 !important;
 }
 
 .nexia-light .nexia-step-card {
@@ -462,15 +462,15 @@
 
 .nexia-light .nexia-step-card__number,
 .nexia-light .nexia-step-card__sub {
-  color: #2547f5;
+  color: #2547f5 !important;
 }
 
 .nexia-light .nexia-step-card__title {
-  color: #0a2a8a;
+  color: #0a2a8a !important;
 }
 
 .nexia-light .nexia-step-card__body {
-  color: #5b6474;
+  color: #5b6474 !important;
 }
 
 /* ---------- Antes de Delegar (pasos) ---------- */
@@ -490,7 +490,7 @@
   font-size: 12px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #2547f5;
+  color: #2547f5 !important;
 }
 
 .nexia-delegable-steps__title {
@@ -498,7 +498,7 @@
   font-weight: 700;
   font-size: clamp(26px, 3.2vw, 40px);
   line-height: 1.15;
-  color: #0a2a8a;
+  color: #0a2a8a !important;
 }
 
 .nexia-delegable-steps__narrative p {
