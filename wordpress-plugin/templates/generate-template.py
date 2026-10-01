@@ -450,40 +450,22 @@ sections.append(
     )
 )
 
-# 5. Delegable
-delegable_html = wrap(
-    "".join(
-        [
-            p("Quizá ya lo intentaste. Contrataste una asistente. Un freelance. Una consultora."),
-            p("Explicaste una tarea. La entregaron. Y terminaste repasándola, corrigiéndola o directamente haciéndola tú otra vez."),
-            f'<p style="font-family:{FONT_DISPLAY}; font-style:italic; font-size:22px; color:{ACCENT}; margin:24px 0;">«Delegar me da más trabajo que hacerlo yo».</p>',
-            p(
-                "Pero hay otro diagnóstico posible. Tal vez intentaste delegar un proceso que nunca "
-                "estuvo realmente construido. Porque si el criterio está en tu cabeza, la información "
-                "está repartida entre WhatsApp y audios y nadie sabe exactamente qué significa «bien "
-                "hecho»... no estás delegando. Estás cruzando los dedos."
-            ),
-            ul(
-                [
-                    "Documentamos",
-                    "Simplificamos",
-                    "Definimos responsabilidades",
-                    "Creamos criterios",
-                    "Automatizamos lo repetitivo",
-                    "Ponemos la información donde debe estar",
-                ]
-            ),
-            f'<p style="font-family:{FONT_DISPLAY}; font-size:24px; font-weight:600; color:{FG}; margin-top:20px;">Entonces delegar deja de ser un acto de fe. Se convierte en un sistema.</p>',
-        ]
-    )
-)
+# 5. Delegable — widget de verdad del plugin (nexia_delegable_steps), no HTML
+# suelto: el copy lleva <style>/<script> propios para el paso a paso animado,
+# y algunos hostings de WordPress borran esas etiquetas al guardar un widget
+# HTML si el usuario no tiene permiso "unfiltered_html". Un widget PHP no
+# pasa por ese filtro.
+delegable_steps_widget_el = {
+    "id": eid(),
+    "elType": "widget",
+    "widgetType": "nexia_delegable_steps",
+    "settings": {},
+    "elements": [],
+}
 sections.append(
     section(
-        [
-            reveal_heading_widget("Antes de delegar", "Antes de delegar, hacemos que tu negocio sea delegable"),
-            html_widget(delegable_html),
-        ],
-        bg=SURFACE, css_class="nexia-light",
+        [delegable_steps_widget_el],
+        bg=SURFACE,
     )
 )
 

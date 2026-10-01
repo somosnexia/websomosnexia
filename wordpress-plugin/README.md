@@ -11,7 +11,12 @@ Este plugin añade a **Elementor** (el constructor que ya usa somosnexia.com) va
    - **Nexia — Hero Radar**: el hero actual de la Home. Logo + navegación, eyebrow, wordmark grande animado, radar con barrido, red de nodos y olas — todo en CSS/SVG (no necesita Three.js). Controles de contenido (logo, navegación, eyebrow, wordmark) en *Contenido*; colores del degradado en *Estilo*.
    - **Nexia — Reveal Heading**: bloque de título/texto que aparece con motion al hacer scroll. Úsalo para dar vida a cualquier sección existente.
    - **Nexia — Method Steps**: tarjetas numeradas (tipo "Detectamos / Ordenamos / Implementamos") con hover y aparición en cascada. El número de tarjetas es libre (repeater): puedes añadir, quitar o reordenar desde el propio editor.
+   - **Nexia — Antes de Delegar (pasos)**: la sección "Antes de delegar" de la Home. El relato aparece línea a línea al hacer scroll y la lista de 6 pasos se anima sola en bucle. Texto fijo (no editable desde Elementor) — para cambiarlo hay que tocar el código del widget.
    - **Nexia — Hero 3D** y **Nexia — Sala de Máquinas 3D**: el hero del submarino (Three.js) y la escena de engranajes/radar/consola. No se usan en la Home actual — están reservados para cuando montéis la página de **Submarino NexIA**.
+
+## Por qué este widget usa un widget de verdad y no HTML pegado
+
+Si vuestro WordPress no tiene el permiso `unfiltered_html` activo para el usuario que edita (algunos hostings y plugins de seguridad lo restringen), pegar HTML con etiquetas `<style>`/`<script>` directamente en un widget nativo "HTML" de Elementor puede hacer que WordPress borre esas etiquetas al guardar — dejando el CSS/JS suelto como texto sin aplicar, y la sección rota. Por eso "Antes de delegar" es un widget PHP de verdad: su CSS vive en `nexia-widgets.css` (enqueued normalmente) y su JS en `nexia-delegable-steps.js`, ninguno de los dos pasa por ese filtro.
 
 ## Actualizar la escena 3D (solo si tocáis el código)
 

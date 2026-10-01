@@ -6,15 +6,15 @@
   ).matches;
 
   function reveal(el) {
-    if (reducedMotion) {
-      el.classList.add("nexia-in-view");
-      return;
-    }
-    var items = el.classList.contains("nexia-stagger")
-      ? Array.prototype.slice.call(el.children)
-      : [el];
+    el.classList.add("nexia-in-view");
+    if (!el.classList.contains("nexia-stagger")) return;
 
+    var items = Array.prototype.slice.call(el.children);
     items.forEach(function (item, i) {
+      if (reducedMotion) {
+        item.classList.add("nexia-in-view");
+        return;
+      }
       setTimeout(function () {
         item.classList.add("nexia-in-view");
       }, i * 90);

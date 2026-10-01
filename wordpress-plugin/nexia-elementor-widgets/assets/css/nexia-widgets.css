@@ -355,7 +355,7 @@
     transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nexia-stagger.nexia-in-view > * {
+.nexia-stagger > *.nexia-in-view {
   opacity: 1;
   transform: translateY(0);
 }
@@ -471,6 +471,241 @@
 
 .nexia-light .nexia-step-card__body {
   color: #5b6474;
+}
+
+/* ---------- Antes de Delegar (pasos) ---------- */
+.nexia-delegable-steps {
+  padding: 96px max(16px, 4vw);
+  font-family: var(--nexia-font-body);
+}
+
+.nexia-delegable-steps__wrap {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nexia-delegable-steps__kicker {
+  margin: 0 0 14px;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #2547f5;
+}
+
+.nexia-delegable-steps__title {
+  margin: 0 0 40px;
+  font-weight: 700;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.15;
+  color: #0a2a8a;
+}
+
+.nexia-delegable-steps__narrative p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #14213d;
+  margin: 0 0 8px;
+}
+
+.nexia-delegable-steps__quote-block {
+  margin: 28px 0 32px;
+}
+
+.nexia-delegable-steps__quote-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5b6474;
+  margin: 0 0 8px;
+}
+
+.nexia-delegable-steps__quote {
+  font-style: italic;
+  font-size: 21px;
+  color: #5b6474;
+  margin: 0;
+  text-decoration: line-through;
+  text-decoration-color: #2547f5;
+}
+
+.nexia-delegable-steps__p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #5b6474;
+  max-width: 70ch;
+  margin: 0 0 14px;
+}
+
+.nexia-delegable-steps__punch {
+  font-weight: 600;
+  font-size: 22px;
+  color: #2547f5;
+  margin: 18px 0 44px;
+}
+
+.nexia-delegable-steps__lead-in {
+  font-size: 18px;
+  font-weight: 600;
+  color: #14213d;
+  margin: 0 0 32px;
+}
+
+.nexia-delegable-steps__steps {
+  list-style: none;
+  margin: 0 0 36px;
+  padding: 0;
+}
+
+.nexia-delegable-steps__step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 26px;
+}
+
+.nexia-delegable-steps__step:last-child {
+  padding-bottom: 0;
+}
+
+.nexia-delegable-steps__step-line {
+  position: absolute;
+  left: 17px;
+  top: 36px;
+  bottom: -26px;
+  width: 2px;
+  background: #e3e7f3;
+  overflow: hidden;
+}
+
+.nexia-delegable-steps__step:last-child .nexia-delegable-steps__step-line {
+  display: none;
+}
+
+.nexia-delegable-steps__step-line-fill {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 0%;
+  background: #2547f5;
+  transition: height 0.5s ease;
+}
+
+.nexia-delegable-steps__step.is-done .nexia-delegable-steps__step-line-fill {
+  height: 100%;
+}
+
+.nexia-delegable-steps__step-dot {
+  position: relative;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #e3e7f3;
+  background: #ffffff;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.35s ease, background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.nexia-delegable-steps__step-num,
+.nexia-delegable-steps__step-check {
+  font-size: 14px;
+  font-weight: 700;
+  transition: opacity 0.25s ease;
+}
+
+.nexia-delegable-steps__step-num {
+  color: #5b6474;
+}
+
+.nexia-delegable-steps__step-check {
+  position: absolute;
+  color: #ffffff;
+  opacity: 0;
+  font-size: 16px;
+}
+
+.nexia-delegable-steps__step.is-active .nexia-delegable-steps__step-dot {
+  border-color: #2547f5;
+  box-shadow: 0 0 0 5px rgba(37, 71, 245, 0.15);
+}
+
+.nexia-delegable-steps__step.is-active .nexia-delegable-steps__step-num {
+  color: #2547f5;
+}
+
+.nexia-delegable-steps__step.is-done .nexia-delegable-steps__step-dot {
+  border-color: #2547f5;
+  background: #2547f5;
+  box-shadow: none;
+}
+
+.nexia-delegable-steps__step.is-done .nexia-delegable-steps__step-num {
+  opacity: 0;
+}
+
+.nexia-delegable-steps__step.is-done .nexia-delegable-steps__step-check {
+  opacity: 1;
+}
+
+.nexia-delegable-steps__step-label {
+  padding-top: 6px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #14213d;
+  transition: color 0.3s ease;
+}
+
+.nexia-delegable-steps__step.is-active .nexia-delegable-steps__step-label {
+  color: #0a2a8a;
+}
+
+.nexia-delegable-steps__step.is-done .nexia-delegable-steps__step-label {
+  color: #5b6474;
+}
+
+.nexia-delegable-steps__final {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nexia-delegable-steps.is-alldone .nexia-delegable-steps__final {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nexia-delegable-steps__final-badge {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #2547f5;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.nexia-delegable-steps__final-text {
+  font-size: 22px;
+  font-weight: 600;
+  color: #14213d;
+  margin: 0;
+}
+
+.nexia-delegable-steps__final-text strong {
+  color: #2547f5;
 }
 
 /* ---------- Sala de Máquinas 3D ---------- */

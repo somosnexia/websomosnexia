@@ -22,14 +22,19 @@ propio `<style>` y clases con prefijo `nx-standalone-` para no chocar con nada. 
 de uso dentro del propio archivo (cabecera en comentario). Pégalo en un widget nativo **HTML**
 de Elementor, dentro de una sección a ancho completo con padding 0.
 
-## Sección "Antes de delegar" con motion
+**Aviso:** si vuestro WordPress no tiene el permiso `unfiltered_html` activo, puede borrar las
+etiquetas `<style>`/`<script>` de este archivo al guardarlo (ved el aviso más abajo). Si el
+hero no sale bien tras pegarlo, es ese el motivo — probad primero si el widget
+`nexia_hero_radar` del plugin (que no depende de pegar HTML) funciona en vuestro caso.
 
-`delegable-steps.html` es otro bloque HTML autónomo (mismo patrón que el hero): el relato de
-la sección "Antes de delegar" aparece línea a línea al hacer scroll, y la lista "Primero:
-documentamos, simplificamos..." se anima sola en bucle como un paso a paso automático (cada
-punto se enciende, se marca como hecho y pasa al siguiente). Instrucciones de uso dentro del
-propio archivo. Pégalo en un widget **HTML** de Elementor sustituyendo el texto plano de esa
-sección — no necesita una sección a ancho completo, trae su propio max-width interno.
+## Sección "Antes de delegar"
+
+Esta sección usa el widget del plugin **Nexia — Antes de Delegar (pasos)**
+(`nexia_delegable_steps`), no HTML pegado — ved `../README.md` para el porqué. El relato
+aparece línea a línea al hacer scroll y la lista de 6 pasos se anima sola en bucle. Si por lo
+que sea necesitáis la versión en HTML suelto igualmente, `delegable-steps.html` y
+`la-creencia-standalone.html` quedan en esta carpeta como referencia, pero **no están
+garantizados** en sitios sin el permiso `unfiltered_html` — ved el aviso de arriba.
 
 ## Regenerar la plantilla
 

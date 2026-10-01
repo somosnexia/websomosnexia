@@ -87,6 +87,14 @@ final class Nexia_Plugin
             NEXIA_WIDGETS_VERSION,
             true
         );
+
+        wp_register_script(
+            'nexia-delegable-steps',
+            NEXIA_WIDGETS_URL . 'assets/js/nexia-delegable-steps.js',
+            [],
+            NEXIA_WIDGETS_VERSION,
+            true
+        );
     }
 
     public function register_widgets($widgets_manager)
@@ -96,11 +104,13 @@ final class Nexia_Plugin
         require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-reveal-heading-widget.php';
         require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-method-steps-widget.php';
         require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-engine-room-widget.php';
+        require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-delegable-steps-widget.php';
 
         $widgets_manager->register(new \Nexia_Hero_3D_Widget());
         $widgets_manager->register(new \Nexia_Hero_Radar_Widget());
         $widgets_manager->register(new \Nexia_Reveal_Heading_Widget());
         $widgets_manager->register(new \Nexia_Method_Steps_Widget());
         $widgets_manager->register(new \Nexia_Engine_Room_Widget());
+        $widgets_manager->register(new \Nexia_Delegable_Steps_Widget());
     }
 }
