@@ -1,0 +1,59 @@
+<!--
+  Sección "La creencia" — bloque HTML autónomo para el widget nativo HTML de
+  Elementor. No depende del widget "Nexia — Reveal Heading" ni de su JS de
+  scroll: todo el texto está siempre visible desde el primer render, sin
+  animación de aparición, para eliminar cualquier posible conflicto con
+  otros plugins/temas que puedan estar interfiriendo con esa animación.
+
+  CÓMO USARLO EN ELEMENTOR
+  1. Entra a editar la Home con Elementor.
+  2. Busca la sección "La creencia" (kicker "LA CREENCIA" / título "Un negocio
+     no escala porque dependa de su dueña"). Dentro verás dos widgets: uno de
+     "Nexia — Reveal Heading" y, debajo, un widget "HTML" con los párrafos.
+  3. Borra AMBOS widgets de esa sección.
+  4. Añade un widget "HTML" (nativo de Elementor) en su lugar.
+  5. Pega TODO el contenido de este archivo dentro de ese widget.
+  6. Guarda y revisa en la página publicada.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  .nx-creencia, .nx-creencia *{box-sizing:border-box;}
+  .nx-creencia{
+    font-family:'Poppins', ui-sans-serif, system-ui, sans-serif;
+    max-width:1120px; margin:0 auto; padding:96px 24px;
+    text-align:center;
+  }
+  .nx-creencia__kicker{
+    margin:0 0 14px; font-weight:500; font-size:12px; letter-spacing:.24em;
+    text-transform:uppercase; color:#2547f5;
+  }
+  .nx-creencia__title{
+    margin:0 0 32px; font-weight:700; font-size:clamp(26px,3.2vw,40px);
+    line-height:1.15; color:#0a2a8a;
+  }
+  .nx-creencia__lead{
+    margin:0 auto 14px; max-width:720px; color:#14213d; font-size:19px; line-height:1.65;
+  }
+  .nx-creencia__p{
+    margin:0 auto 14px; max-width:720px; color:#5b6474; font-size:18px; line-height:1.65;
+  }
+  .nx-creencia__tags{
+    margin:0 auto 14px; max-width:720px; color:#2547f5; font-size:18px; line-height:1.65;
+  }
+  .nx-creencia__punch{
+    margin:20px auto; max-width:720px; font-size:26px; font-weight:600; color:#2547f5;
+  }
+</style>
+
+<div class="nx-creencia">
+  <p class="nx-creencia__kicker">La creencia</p>
+  <h2 class="nx-creencia__title">Un negocio no escala porque dependa de su dueña</h2>
+  <p class="nx-creencia__lead">Escala cuando puede sostener más clientes, más ventas y más movimiento sin necesitar de tu tiempo y de tu supervisión constante.</p>
+  <p class="nx-creencia__tags">Cuando dejas de depender de la operativa diaria · Cuando puedes organizarte mejor · Trabajar más rápido · Contratar a alguien.</p>
+  <p class="nx-creencia__p">Pero si los procesos siguen viviendo en tu cabeza, tu equipo necesita tu aprobación para avanzar y cada tarea depende de una acción tuya... sigues siendo imprescindible para la operativa.</p>
+  <p class="nx-creencia__punch">Y ser imprescindible está guay hasta que quieres apagar el portátil.</p>
+  <p class="nx-creencia__p">Entonces la cosa se complica y empiezas a sentir que el negocio te ahoga. Necesitas que el negocio avance sin depender de ti para toooodo.</p>
+</div>
