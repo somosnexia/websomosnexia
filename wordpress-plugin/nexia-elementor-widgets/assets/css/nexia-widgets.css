@@ -831,8 +831,8 @@
 
 .nexia-newsletter-signal__mark {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   flex: 0 0 auto;
   display: flex;
   align-items: center;
@@ -867,12 +867,14 @@
   }
 }
 
-.nexia-newsletter-signal__x {
+.nexia-newsletter-signal__logo {
   position: relative;
-  width: 52px;
-  height: 52px;
+  width: 92px;
+  height: auto;
   z-index: 1;
-  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.55));
+  display: block;
+  filter: brightness(0) invert(1)
+    drop-shadow(0 0 14px rgba(255, 255, 255, 0.55));
   animation: nexia-signal-pulse 3.2s ease-in-out infinite;
 }
 
@@ -884,25 +886,6 @@
   50% {
     transform: scale(1.08);
   }
-}
-
-.nexia-newsletter-signal__bar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 14px;
-  height: 56px;
-  margin: -28px 0 0 -7px;
-  border-radius: 7px;
-  background: #ffffff;
-}
-
-.nexia-newsletter-signal__bar--a {
-  transform: rotate(45deg);
-}
-
-.nexia-newsletter-signal__bar--b {
-  transform: rotate(-45deg);
 }
 
 .nexia-newsletter-signal__copy {
@@ -967,7 +950,7 @@
   }
 
   .nexia-newsletter-signal__ring,
-  .nexia-newsletter-signal__x {
+  .nexia-newsletter-signal__logo {
     animation: none !important;
     opacity: 0.6;
   }

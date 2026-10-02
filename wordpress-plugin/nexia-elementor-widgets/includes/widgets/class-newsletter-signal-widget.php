@@ -90,10 +90,11 @@ class Nexia_Newsletter_Signal_Widget extends Widget_Base
                 <span class="nexia-newsletter-signal__ring nexia-newsletter-signal__ring--1"></span>
                 <span class="nexia-newsletter-signal__ring nexia-newsletter-signal__ring--2"></span>
                 <span class="nexia-newsletter-signal__ring nexia-newsletter-signal__ring--3"></span>
-                <span class="nexia-newsletter-signal__x">
-                    <span class="nexia-newsletter-signal__bar nexia-newsletter-signal__bar--a"></span>
-                    <span class="nexia-newsletter-signal__bar nexia-newsletter-signal__bar--b"></span>
-                </span>
+                <img
+                    class="nexia-newsletter-signal__logo"
+                    src="<?php echo esc_url(NEXIA_WIDGETS_URL . 'assets/images/nexia-logo-color.png'); ?>"
+                    alt=""
+                >
             </div>
             <div class="nexia-newsletter-signal__copy">
                 <?php if (!empty($s['title'])) : ?>
