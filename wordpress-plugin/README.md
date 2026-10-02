@@ -12,6 +12,7 @@ Este plugin añade a **Elementor** (el constructor que ya usa somosnexia.com) va
    - **Nexia — Reveal Heading**: bloque de título/texto que aparece con motion al hacer scroll. Úsalo para dar vida a cualquier sección existente.
    - **Nexia — Method Steps**: tarjetas numeradas (tipo "Detectamos / Ordenamos / Implementamos") con hover y aparición en cascada. El número de tarjetas es libre (repeater): puedes añadir, quitar o reordenar desde el propio editor.
    - **Nexia — Antes de Delegar (pasos)**: la sección "Antes de delegar" de la Home. El relato aparece línea a línea al hacer scroll y la lista de 6 pasos se anima sola en bucle. Texto fijo (no editable desde Elementor) — para cambiarlo hay que tocar el código del widget.
+   - **Nexia — Señales (newsletter)**: bloque de captación para el footer/newsletter — la X del logo pulsa con anillos de señal de radar alrededor. Título, subtítulo, texto y botón (texto + enlace) son editables desde Elementor.
    - **Nexia — Hero 3D** y **Nexia — Sala de Máquinas 3D**: el hero del submarino (Three.js) y la escena de engranajes/radar/consola. No se usan en la Home actual — están reservados para cuando montéis la página de **Submarino NexIA**.
 
 ## Por qué este widget usa un widget de verdad y no HTML pegado

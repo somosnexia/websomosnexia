@@ -105,6 +105,7 @@ final class Nexia_Plugin
         require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-method-steps-widget.php';
         require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-engine-room-widget.php';
         require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-delegable-steps-widget.php';
+        require_once NEXIA_WIDGETS_PATH . 'includes/widgets/class-newsletter-signal-widget.php';
 
         $widgets_manager->register(new \Nexia_Hero_3D_Widget());
         $widgets_manager->register(new \Nexia_Hero_Radar_Widget());
@@ -112,5 +113,6 @@ final class Nexia_Plugin
         $widgets_manager->register(new \Nexia_Method_Steps_Widget());
         $widgets_manager->register(new \Nexia_Engine_Room_Widget());
         $widgets_manager->register(new \Nexia_Delegable_Steps_Widget());
+        $widgets_manager->register(new \Nexia_Newsletter_Signal_Widget());
     }
 }
