@@ -53,6 +53,18 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
             'default' => 'Somos Nexia',
         ]);
 
+        $this->add_control('background_style', [
+            'label' => __('Estilo de fondo', 'nexia-elementor-widgets'),
+            'type' => Controls_Manager::SELECT,
+            'default' => 'radar',
+            'options' => [
+                'radar' => __('Radar + red de nodos (Home)', 'nexia-elementor-widgets'),
+                'grid' => __('Cuadrícula técnica (Servicios)', 'nexia-elementor-widgets'),
+                'waves' => __('Solo olas (Sobre Nosotras)', 'nexia-elementor-widgets'),
+                'minimal' => __('Mínimo — solo degradado (Contacto)', 'nexia-elementor-widgets'),
+            ],
+        ]);
+
         $this->end_controls_section();
 
         $this->start_controls_section('style_section', [
@@ -109,9 +121,18 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
         ];
     }
 
+    // Puntos de los "nodos" del panel de Servicios (cuadrícula técnica).
+    private function grid_node_dots()
+    {
+        return [
+            [28, 32], [64, 58], [72, 24], [38, 70], [84, 44], [18, 54],
+        ];
+    }
+
     protected function render()
     {
         $s = $this->get_settings_for_display();
+        $style = !empty($s['background_style']) ? $s['background_style'] : 'radar';
 
         $points = $this->node_points();
         $svg_points = implode(' ', array_map(function ($p) {
@@ -121,39 +142,52 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
         $words = preg_split('/\s+/', trim($s['wordmark']));
         ?>
         <div
-            class="nexia-widgets-scope nexia-hero-radar"
+            class="nexia-widgets-scope nexia-hero-radar nexia-hero-radar--<?php echo esc_attr($style); ?>"
             style="--nexia-hero-g1:<?php echo esc_attr($s['gradient_1']); ?>; --nexia-hero-g2:<?php echo esc_attr($s['gradient_2']); ?>; --nexia-hero-g3:<?php echo esc_attr($s['gradient_3']); ?>;"
         >
             <div class="nexia-hero-radar__bg">
-                <svg class="nexia-hero-radar__nodes" viewBox="0 0 1440 600" preserveAspectRatio="none">
-                    <polyline points="<?php echo esc_attr($svg_points); ?>" fill="none" stroke="#fff" stroke-width="1"></polyline>
-                </svg>
-                <div class="nexia-hero-radar__pulses">
-                    <?php foreach ($points as $i => $p): ?>
-                        <span
-                            class="nexia-hero-radar__pulse"
-                            style="left:<?php echo esc_attr($p[0]); ?>%; top:<?php echo esc_attr($p[1]); ?>%; animation-delay:<?php echo esc_attr(round($i * 0.45, 2)); ?>s;"
-                        ></span>
+                <?php if ($style === 'radar') : ?>
+                    <svg class="nexia-hero-radar__nodes" viewBox="0 0 1440 600" preserveAspectRatio="none">
+                        <polyline points="<?php echo esc_attr($svg_points); ?>" fill="none" stroke="#fff" stroke-width="1"></polyline>
+                    </svg>
+                    <div class="nexia-hero-radar__pulses">
+                        <?php foreach ($points as $i => $p): ?>
+                            <span
+                                class="nexia-hero-radar__pulse"
+                                style="left:<?php echo esc_attr($p[0]); ?>%; top:<?php echo esc_attr($p[1]); ?>%; animation-delay:<?php echo esc_attr(round($i * 0.45, 2)); ?>s;"
+                            ></span>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="nexia-hero-radar__radar" aria-hidden="true">
+                        <div class="nexia-hero-radar__ring nexia-hero-radar__ring--outer"></div>
+                        <div class="nexia-hero-radar__ring" style="inset:12.5%;"></div>
+                        <div class="nexia-hero-radar__ring" style="inset:25%;"></div>
+                        <div class="nexia-hero-radar__ring" style="inset:37.5%;"></div>
+                        <div class="nexia-hero-radar__axis nexia-hero-radar__axis--v"></div>
+                        <div class="nexia-hero-radar__axis nexia-hero-radar__axis--h"></div>
+                        <div class="nexia-hero-radar__sweep"></div>
+                        <?php foreach ($this->radar_blips() as $b): ?>
+                            <span
+                                class="nexia-hero-radar__blip"
+                                style="left:<?php echo esc_attr($b[0]); ?>%; top:<?php echo esc_attr($b[1]); ?>%; animation-delay:<?php echo esc_attr($b[2]); ?>s;"
+                            ></span>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if ($style === 'grid') : ?>
+                    <div class="nexia-hero-radar__grid" aria-hidden="true"></div>
+                    <div class="nexia-hero-radar__scanline" aria-hidden="true"></div>
+                    <?php foreach ($this->grid_node_dots() as $d): ?>
+                        <span class="nexia-hero-radar__node-dot" style="left:<?php echo esc_attr($d[0]); ?>%; top:<?php echo esc_attr($d[1]); ?>%;"></span>
                     <?php endforeach; ?>
-                </div>
-                <div class="nexia-hero-radar__radar" aria-hidden="true">
-                    <div class="nexia-hero-radar__ring nexia-hero-radar__ring--outer"></div>
-                    <div class="nexia-hero-radar__ring" style="inset:12.5%;"></div>
-                    <div class="nexia-hero-radar__ring" style="inset:25%;"></div>
-                    <div class="nexia-hero-radar__ring" style="inset:37.5%;"></div>
-                    <div class="nexia-hero-radar__axis nexia-hero-radar__axis--v"></div>
-                    <div class="nexia-hero-radar__axis nexia-hero-radar__axis--h"></div>
-                    <div class="nexia-hero-radar__sweep"></div>
-                    <?php foreach ($this->radar_blips() as $b): ?>
-                        <span
-                            class="nexia-hero-radar__blip"
-                            style="left:<?php echo esc_attr($b[0]); ?>%; top:<?php echo esc_attr($b[1]); ?>%; animation-delay:<?php echo esc_attr($b[2]); ?>s;"
-                        ></span>
-                    <?php endforeach; ?>
-                </div>
-                <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--1" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="rgba(255,255,255,.14)"></path></svg>
-                <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--2" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="rgba(255,255,255,.28)"></path></svg>
-                <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--3" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="var(--nexia-bg)"></path></svg>
+                <?php endif; ?>
+
+                <?php if ($style === 'radar' || $style === 'waves') : ?>
+                    <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--1" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="rgba(255,255,255,.14)"></path></svg>
+                    <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--2" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="rgba(255,255,255,.28)"></path></svg>
+                    <svg class="nexia-hero-radar__wave nexia-hero-radar__wave--3" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 60 C240 10 480 10 720 60 C960 110 1200 110 1440 60 C1680 10 1920 10 2160 60 C2400 110 2640 110 2880 60 L2880 120 L0 120 Z" fill="var(--nexia-bg)"></path></svg>
+                <?php endif; ?>
             </div>
 
             <div class="nexia-hero-radar__wordmark-block">
