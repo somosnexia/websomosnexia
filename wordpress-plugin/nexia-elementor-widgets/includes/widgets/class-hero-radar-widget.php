@@ -101,6 +101,28 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
             ],
         ]);
 
+        $this->add_control('full_bleed', [
+            'label' => __('Ocupar todo el ancho de pantalla', 'nexia-elementor-widgets'),
+            'type' => Controls_Manager::SWITCHER,
+            'label_on' => __('Sí', 'nexia-elementor-widgets'),
+            'label_off' => __('No', 'nexia-elementor-widgets'),
+            'default' => 'yes',
+            'selectors' => [
+                '{{WRAPPER}} .nexia-hero-radar' => 'width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);',
+            ],
+        ]);
+
+        $this->add_responsive_control('content_max_width', [
+            'label' => __('Ancho máximo del contenido (px)', 'nexia-elementor-widgets'),
+            'type' => Controls_Manager::SLIDER,
+            'range' => ['px' => ['min' => 320, 'max' => 1800]],
+            'default' => ['size' => 900, 'unit' => 'px'],
+            'size_units' => ['px'],
+            'selectors' => [
+                '{{WRAPPER}} .nexia-hero-radar__wordmark-block' => 'max-width: {{SIZE}}{{UNIT}}; margin-left: auto; margin-right: auto;',
+            ],
+        ]);
+
         $this->end_controls_section();
     }
 
