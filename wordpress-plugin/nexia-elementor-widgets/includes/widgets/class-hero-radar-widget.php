@@ -140,6 +140,51 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
         }, $points));
 
         $words = preg_split('/\s+/', trim($s['wordmark']));
+
+        static $printed_grid_style = false;
+        if ($style === 'grid' && !$printed_grid_style) {
+            $printed_grid_style = true;
+            ?>
+            <style>
+                .nexia-hero-radar__grid {
+                    position: absolute;
+                    inset: 0;
+                    background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+                    background-size: 36px 36px;
+                    mask-image: radial-gradient(ellipse at 50% 45%, transparent 32%, #000 62%, transparent 95%);
+                    -webkit-mask-image: radial-gradient(ellipse at 50% 45%, transparent 32%, #000 62%, transparent 95%);
+                }
+                .nexia-hero-radar__scanline {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+                    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.25);
+                    mask-image: linear-gradient(to bottom, #000 0%, #000 26%, transparent 38%, transparent 62%, #000 74%, #000 100%);
+                    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 26%, transparent 38%, transparent 62%, #000 74%, #000 100%);
+                    animation: nx-scan 4.5s ease-in-out infinite;
+                }
+                @keyframes nx-scan {
+                    0% { top: 12%; }
+                    50% { top: 88%; }
+                    100% { top: 12%; }
+                }
+                .nexia-hero-radar__node-dot {
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: #fff;
+                    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.6);
+                }
+                @media (prefers-reduced-motion: reduce) {
+                    .nexia-hero-radar__scanline { animation: none !important; }
+                }
+            </style>
+            <?php
+        }
         ?>
         <div
             class="nexia-widgets-scope nexia-hero-radar nexia-hero-radar--<?php echo esc_attr($style); ?>"
