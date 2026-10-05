@@ -93,8 +93,8 @@ class Nexia_Hero_Radar_Widget extends Widget_Base
         $this->add_control('min_height', [
             'label' => __('Altura mínima (vh)', 'nexia-elementor-widgets'),
             'type' => Controls_Manager::SLIDER,
-            'range' => ['px' => ['min' => 40, 'max' => 100]],
-            'default' => ['size' => 100, 'unit' => 'px'],
+            'range' => ['vh' => ['min' => 40, 'max' => 100]],
+            'default' => ['size' => 100, 'unit' => 'vh'],
             'size_units' => ['vh'],
             'selectors' => [
                 '{{WRAPPER}} .nexia-hero-radar' => 'min-height: {{SIZE}}{{UNIT}};',
